@@ -7,245 +7,278 @@
   <title>SSP21</title>
   <style type="text/css">code{white-space: pre;}</style>
   <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="spec_markdown.css" type="text/css" />
 </head>
 <body>
 <div id="header">
 <h1 class="title">SSP21</h1>
-<b>Date:</b> 04/19/19 (r345 )<br/>
+<b>Date:</b> 02/05/20 (r347)<br/>
 </div>
 <div id="TOC">
 <h2 class="toc">Table of Contents</h2>
 <ul>
-<li><a href="#introduction"><span class="toc-section-number">1</span> Introduction</a></li>
-<li><a href="#requirements"><span class="toc-section-number">2</span> Requirements</a><ul>
-<li><a href="#simplicity-of-implementation"><span class="toc-section-number">2.1</span> Simplicity of implementation</a></li>
-<li><a href="#use-only-strong-vetted-cryptography"><span class="toc-section-number">2.2</span> Use only strong vetted cryptography</a></li>
-<li><a href="#flexible-basis-of-trust"><span class="toc-section-number">2.3</span> Flexible Basis of trust</a></li>
-<li><a href="#asymmetric-certificate-revocation"><span class="toc-section-number">2.4</span> Asymmetric Certificate Revocation</a></li>
-<li><a href="#extensible-only-to-the-extent-necessary"><span class="toc-section-number">2.5</span> Extensible only to the extent necessary</a></li>
-<li><a href="#authentication"><span class="toc-section-number">2.6</span> Authentication</a></li>
-<li><a href="#protection-from-replay"><span class="toc-section-number">2.7</span> Protection from replay</a></li>
-<li><a href="#session-message-time-to-live-ttl"><span class="toc-section-number">2.8</span> Session message time-to-live (TTL)</a></li>
-<li><a href="#optional-encryption"><span class="toc-section-number">2.9</span> Optional encryption</a></li>
-<li><a href="#perfect-forward-secrecy"><span class="toc-section-number">2.10</span> Perfect Forward Secrecy</a></li>
-<li><a href="#support-bump-in-the-wire-retrofits"><span class="toc-section-number">2.11</span> Support bump-in-the-wire retrofits</a></li>
-<li><a href="#support-serial-and-ip"><span class="toc-section-number">2.12</span> Support serial and IP</a></li>
-<li><a href="#low-overhead"><span class="toc-section-number">2.13</span> Low overhead</a></li>
+<li><a href="#version-information"><span class="toc-section-number">1</span> Version Information</a></li>
+<li><a href="#introduction"><span class="toc-section-number">2</span> Introduction</a></li>
+<li><a href="#requirements"><span class="toc-section-number">3</span> Requirements</a><ul>
+<li><a href="#simplicity-of-implementation"><span class="toc-section-number">3.1</span> Simplicity of implementation</a></li>
+<li><a href="#use-only-strong-vetted-cryptography"><span class="toc-section-number">3.2</span> Use only strong vetted cryptography</a></li>
+<li><a href="#flexible-basis-of-trust"><span class="toc-section-number">3.3</span> Flexible Basis of trust</a></li>
+<li><a href="#asymmetric-certificate-revocation"><span class="toc-section-number">3.4</span> Asymmetric Certificate Revocation</a></li>
+<li><a href="#extensible-only-to-the-extent-necessary"><span class="toc-section-number">3.5</span> Extensible only to the extent necessary</a></li>
+<li><a href="#authentication"><span class="toc-section-number">3.6</span> Authentication</a></li>
+<li><a href="#protection-from-replay"><span class="toc-section-number">3.7</span> Protection from replay</a></li>
+<li><a href="#session-message-time-to-live-ttl"><span class="toc-section-number">3.8</span> Session message time-to-live (TTL)</a></li>
+<li><a href="#optional-encryption"><span class="toc-section-number">3.9</span> Optional encryption</a></li>
+<li><a href="#perfect-forward-secrecy"><span class="toc-section-number">3.10</span> Perfect Forward Secrecy</a></li>
+<li><a href="#support-bump-in-the-wire-retrofits"><span class="toc-section-number">3.11</span> Support bump-in-the-wire retrofits</a></li>
+<li><a href="#support-serial-and-ip"><span class="toc-section-number">3.12</span> Support serial and IP</a></li>
+<li><a href="#low-overhead"><span class="toc-section-number">3.13</span> Low overhead</a></li>
 </ul></li>
-<li><a href="#handshake-mode"><span class="toc-section-number">3</span> Handshake mode</a><ul>
-<li><a href="#shared-secrets"><span class="toc-section-number">3.1</span> Shared secrets</a></li>
-<li><a href="#pre-shared-public-keys"><span class="toc-section-number">3.2</span> Pre-shared public keys</a></li>
-<li><a href="#public-keys-authenticated-from-a-root-certificate"><span class="toc-section-number">3.3</span> Public keys authenticated from a root certificate</a><ul>
-<li><a href="#the-role-of-the-authority"><span class="toc-section-number">3.3.1</span> The role of the authority</a></li>
-<li><a href="#issuing-outstation-certificates"><span class="toc-section-number">3.3.2</span> Issuing outstation certificates</a></li>
-<li><a href="#revoking-outstation-certificates"><span class="toc-section-number">3.3.3</span> Revoking outstation certificates</a></li>
-<li><a href="#issuing-master-certificates"><span class="toc-section-number">3.3.4</span> Issuing master certificates</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#the-link-layer"><span class="toc-section-number">4</span> The Link Layer</a><ul>
-<li><a href="#crc-polynomial"><span class="toc-section-number">4.1</span> CRC Polynomial</a></li>
-</ul></li>
-<li><a href="#cryptographic-layer"><span class="toc-section-number">5</span> Cryptographic Layer</a><ul>
-<li><a href="#terminology"><span class="toc-section-number">5.1</span> Terminology</a></li>
-<li><a href="#algorithms"><span class="toc-section-number">5.2</span> Algorithms</a><ul>
-<li><a href="#diffie-hellman-dh-functions"><span class="toc-section-number">5.2.1</span> Diffie-Hellman (DH) functions</a></li>
-<li><a href="#hash-functions"><span class="toc-section-number">5.2.2</span> Hash Functions</a></li>
-<li><a href="#hashed-message-authentication-code-hmac"><span class="toc-section-number">5.2.3</span> Hashed Message Authentication Code (HMAC)</a></li>
-<li><a href="#key-derivation-function-kdf"><span class="toc-section-number">5.2.4</span> Key Derivation Function (KDF)</a><ul>
-<li><a href="#hkdf"><span class="toc-section-number">5.2.4.1</span> HKDF</a></li>
-</ul></li>
-<li><a href="#csprng"><span class="toc-section-number">5.2.5</span> CSPRNG</a></li>
-</ul></li>
-<li><a href="#messages"><span class="toc-section-number">5.3</span> Messages</a><ul>
-<li><a href="#syntax"><span class="toc-section-number">5.3.1</span> Syntax</a><ul>
-<li><a href="#structs"><span class="toc-section-number">5.3.1.1</span> Structs</a></li>
-<li><a href="#enumerations"><span class="toc-section-number">5.3.1.2</span> Enumerations</a></li>
-<li><a href="#bit-fields"><span class="toc-section-number">5.3.1.3</span> Bit fields</a></li>
-<li><a href="#sequences"><span class="toc-section-number">5.3.1.4</span> Sequences</a><ul>
-<li><a href="#variable-length-count"><span class="toc-section-number">5.3.1.4.1</span> Variable Length Count</a></li>
-<li><a href="#examples"><span class="toc-section-number">5.3.1.4.2</span> Examples</a></li>
-</ul></li>
-<li><a href="#constraints"><span class="toc-section-number">5.3.1.5</span> Constraints</a></li>
-</ul></li>
-<li><a href="#definitions"><span class="toc-section-number">5.3.2</span> Definitions</a><ul>
-<li><a href="#enumerations-1"><span class="toc-section-number">5.3.2.1</span> Enumerations</a><ul>
-<li><a href="#function"><span class="toc-section-number">5.3.2.1.1</span> Function</a></li>
-<li><a href="#session-nonce-mode"><span class="toc-section-number">5.3.2.1.2</span> Session Nonce Mode</a></li>
-<li><a href="#handshake-ephemeral"><span class="toc-section-number">5.3.2.1.3</span> Handshake Ephemeral</a></li>
-<li><a href="#handshake-hash"><span class="toc-section-number">5.3.2.1.4</span> Handshake Hash</a></li>
-<li><a href="#handshake-kdf"><span class="toc-section-number">5.3.2.1.5</span> Handshake KDF</a></li>
-<li><a href="#session-crypto-mode"><span class="toc-section-number">5.3.2.1.6</span> Session Crypto Mode</a></li>
-<li><a href="#handshake-mode-1"><span class="toc-section-number">5.3.2.1.7</span> Handshake Mode</a></li>
-<li><a href="#handshake-error"><span class="toc-section-number">5.3.2.1.8</span> Handshake Error</a></li>
-</ul></li>
-<li><a href="#handshake-messages"><span class="toc-section-number">5.3.2.2</span> Handshake Messages</a><ul>
-<li><a href="#request-handshake-begin"><span class="toc-section-number">5.3.2.2.1</span> Request Handshake Begin</a></li>
-<li><a href="#reply-handshake-begin"><span class="toc-section-number">5.3.2.2.2</span> Reply Handshake Begin</a></li>
-<li><a href="#reply-handshake-error"><span class="toc-section-number">5.3.2.2.3</span> Reply Handshake Error</a></li>
-<li><a href="#session-data"><span class="toc-section-number">5.3.2.2.4</span> Session Data</a></li>
+<li><a href="#handshake-mode"><span class="toc-section-number">4</span> Handshake mode</a><ul>
+<li><a href="#shared-secrets"><span class="toc-section-number">4.1</span> Shared secrets</a></li>
+<li><a href="#pre-shared-public-keys"><span class="toc-section-number">4.2</span> Pre-shared public keys</a></li>
+<li><a href="#public-keys-authenticated-from-a-root-certificate"><span class="toc-section-number">4.3</span> Public keys authenticated from a root certificate</a><ul>
+<li><a href="#the-role-of-the-authority"><span class="toc-section-number">4.3.1</span> The role of the authority</a></li>
+<li><a href="#issuing-outstation-certificates"><span class="toc-section-number">4.3.2</span> Issuing outstation certificates</a></li>
+<li><a href="#revoking-outstation-certificates"><span class="toc-section-number">4.3.3</span> Revoking outstation certificates</a></li>
+<li><a href="#issuing-master-certificates"><span class="toc-section-number">4.3.4</span> Issuing master certificates</a></li>
 </ul></li>
 </ul></li>
+<li><a href="#the-link-layer"><span class="toc-section-number">5</span> The Link Layer</a><ul>
+<li><a href="#crc-polynomial"><span class="toc-section-number">5.1</span> CRC Polynomial</a></li>
 </ul></li>
-<li><a href="#key-agreement-handshake"><span class="toc-section-number">5.4</span> Key Agreement Handshake</a><ul>
-<li><a href="#timing-considerations"><span class="toc-section-number">5.4.1</span> Timing Considerations</a></li>
-<li><a href="#abstract-handshake-interfaces"><span class="toc-section-number">5.4.2</span> Abstract Handshake Interfaces</a><ul>
-<li><a href="#initiator-handshake-interface-ihi"><span class="toc-section-number">5.4.2.1</span> Initiator Handshake Interface (IHI)</a></li>
-<li><a href="#responder-handshake-interface-rhi"><span class="toc-section-number">5.4.2.2</span> Responder Handshake Interface (RHI)</a></li>
+<li><a href="#cryptographic-layer"><span class="toc-section-number">6</span> Cryptographic Layer</a><ul>
+<li><a href="#terminology"><span class="toc-section-number">6.1</span> Terminology</a></li>
+<li><a href="#algorithms"><span class="toc-section-number">6.2</span> Algorithms</a><ul>
+<li><a href="#diffie-hellman-dh-functions"><span class="toc-section-number">6.2.1</span> Diffie-Hellman (DH) functions</a></li>
+<li><a href="#hash-functions"><span class="toc-section-number">6.2.2</span> Hash Functions</a></li>
+<li><a href="#hashed-message-authentication-code-hmac"><span class="toc-section-number">6.2.3</span> Hashed Message Authentication Code (HMAC)</a></li>
+<li><a href="#authenticated-encryption-with-associated-data-aead"><span class="toc-section-number">6.2.4</span> Authenticated Encryption with Associated Data (AEAD)</a></li>
+<li><a href="#key-derivation-function-kdf"><span class="toc-section-number">6.2.5</span> Key Derivation Function (KDF)</a><ul>
+<li><a href="#hkdf"><span class="toc-section-number">6.2.5.1</span> HKDF</a></li>
 </ul></li>
-<li><a href="#generic-handshake-procedure"><span class="toc-section-number">5.4.3</span> Generic Handshake Procedure</a><ul>
-<li><a href="#initiator-handshake-procedure"><span class="toc-section-number">5.4.3.1</span> Initiator Handshake Procedure</a></li>
-<li><a href="#responder-handshake-procedure"><span class="toc-section-number">5.4.3.2</span> Responder Handshake Procedure</a><ul>
-<li><a href="#processing-requesthandshakebegin"><span class="toc-section-number">5.4.3.2.1</span> Processing RequestHandshakeBegin</a></li>
-<li><a href="#handling-session-auth-request"><span class="toc-section-number">5.4.3.2.2</span> Handling Session Auth Request</a></li>
+<li><a href="#csprng"><span class="toc-section-number">6.2.6</span> CSPRNG</a></li>
 </ul></li>
+<li><a href="#messages"><span class="toc-section-number">6.3</span> Messages</a><ul>
+<li><a href="#syntax"><span class="toc-section-number">6.3.1</span> Syntax</a><ul>
+<li><a href="#structs"><span class="toc-section-number">6.3.1.1</span> Structs</a></li>
+<li><a href="#enumerations"><span class="toc-section-number">6.3.1.2</span> Enumerations</a></li>
+<li><a href="#bit-fields"><span class="toc-section-number">6.3.1.3</span> Bit fields</a></li>
+<li><a href="#sequences"><span class="toc-section-number">6.3.1.4</span> Sequences</a><ul>
+<li><a href="#variable-length-count"><span class="toc-section-number">6.3.1.4.1</span> Variable Length Count</a></li>
+<li><a href="#examples"><span class="toc-section-number">6.3.1.4.2</span> Examples</a></li>
 </ul></li>
-<li><a href="#security-properties"><span class="toc-section-number">5.4.4</span> Security Properties</a></li>
-<li><a href="#message-exchanges"><span class="toc-section-number">5.4.5</span> Message Exchanges</a></li>
-<li><a href="#handshake-modes"><span class="toc-section-number">5.4.6</span> Handshake Modes</a><ul>
-<li><a href="#shared-secret-mode"><span class="toc-section-number">5.4.6.1</span> Shared secret mode</a><ul>
-<li><a href="#ihi-implementation"><span class="toc-section-number">5.4.6.1.1</span> IHI Implementation</a></li>
-<li><a href="#rhi-implementation"><span class="toc-section-number">5.4.6.1.2</span> RHI Implementation</a></li>
+<li><a href="#constraints"><span class="toc-section-number">6.3.1.5</span> Constraints</a></li>
 </ul></li>
-<li><a href="#quantum-key-distribution-qkd-mode"><span class="toc-section-number">5.4.6.2</span> Quantum Key Distribution (QKD) mode</a><ul>
-<li><a href="#ihi-implementation-1"><span class="toc-section-number">5.4.6.2.1</span> IHI Implementation</a></li>
-<li><a href="#rhi-implementation-1"><span class="toc-section-number">5.4.6.2.2</span> RHI Implementation</a></li>
+<li><a href="#definitions"><span class="toc-section-number">6.3.2</span> Definitions</a><ul>
+<li><a href="#enumerations-1"><span class="toc-section-number">6.3.2.1</span> Enumerations</a><ul>
+<li><a href="#function"><span class="toc-section-number">6.3.2.1.1</span> Function</a></li>
+<li><a href="#session-nonce-mode"><span class="toc-section-number">6.3.2.1.2</span> Session Nonce Mode</a></li>
+<li><a href="#handshake-ephemeral"><span class="toc-section-number">6.3.2.1.3</span> Handshake Ephemeral</a></li>
+<li><a href="#handshake-hash"><span class="toc-section-number">6.3.2.1.4</span> Handshake Hash</a></li>
+<li><a href="#handshake-kdf"><span class="toc-section-number">6.3.2.1.5</span> Handshake KDF</a></li>
+<li><a href="#session-crypto-mode"><span class="toc-section-number">6.3.2.1.6</span> Session Crypto Mode</a></li>
+<li><a href="#handshake-mode-1"><span class="toc-section-number">6.3.2.1.7</span> Handshake Mode</a></li>
+<li><a href="#handshake-error"><span class="toc-section-number">6.3.2.1.8</span> Handshake Error</a></li>
 </ul></li>
-<li><a href="#pre-shared-public-key-mode"><span class="toc-section-number">5.4.6.3</span> Pre-shared public key mode</a><ul>
-<li><a href="#ihi-implementation-2"><span class="toc-section-number">5.4.6.3.1</span> IHI Implementation</a></li>
-<li><a href="#rhi-implementation-2"><span class="toc-section-number">5.4.6.3.2</span> RHI Implementation</a></li>
-<li><a href="#input-key-material-ikm-procedure-responder"><span class="toc-section-number">5.4.6.3.3</span> Input Key Material (IKM) Procedure (Responder)</a></li>
-</ul></li>
-<li><a href="#industrial-certificate-mode"><span class="toc-section-number">5.4.6.4</span> Industrial Certificate Mode</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#sessions"><span class="toc-section-number">5.5</span> Sessions</a><ul>
-<li><a href="#initialization"><span class="toc-section-number">5.5.1</span> Initialization</a></li>
-<li><a href="#invalidation"><span class="toc-section-number">5.5.2</span> Invalidation</a></li>
-<li><a href="#sending-sessiondata"><span class="toc-section-number">5.5.3</span> Sending <code>SessionData</code></a></li>
-<li><a href="#validating-sessiondata"><span class="toc-section-number">5.5.4</span> Validating <code>SessionData</code></a></li>
-<li><a href="#time-to-live"><span class="toc-section-number">5.5.5</span> Time-to-live</a><ul>
-<li><a href="#clock-drift"><span class="toc-section-number">5.5.5.1</span> Clock drift</a></li>
-<li><a href="#setting-the-ttl"><span class="toc-section-number">5.5.5.2</span> Setting the TTL</a></li>
-<li><a href="#disabling-support"><span class="toc-section-number">5.5.5.3</span> Disabling Support</a></li>
-</ul></li>
-<li><a href="#session-crypto-modes"><span class="toc-section-number">5.5.6</span> Session Crypto Modes</a><ul>
-<li><a href="#mac-modes"><span class="toc-section-number">5.5.6.1</span> MAC Modes</a></li>
+<li><a href="#handshake-messages"><span class="toc-section-number">6.3.2.2</span> Handshake Messages</a><ul>
+<li><a href="#version"><span class="toc-section-number">6.3.2.2.1</span> Version</a></li>
+<li><a href="#request-handshake-begin"><span class="toc-section-number">6.3.2.2.2</span> Request Handshake Begin</a></li>
+<li><a href="#reply-handshake-begin"><span class="toc-section-number">6.3.2.2.3</span> Reply Handshake Begin</a></li>
+<li><a href="#reply-handshake-error"><span class="toc-section-number">6.3.2.2.4</span> Reply Handshake Error</a></li>
+<li><a href="#session-data"><span class="toc-section-number">6.3.2.2.5</span> Session Data</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#certificates"><span class="toc-section-number">5.6</span> Certificates</a><ul>
-<li><a href="#icf-definition"><span class="toc-section-number">5.6.1</span> ICF Definition</a><ul>
-<li><a href="#enumerations-2"><span class="toc-section-number">5.6.1.1</span> Enumerations</a><ul>
-<li><a href="#publickeytype"><span class="toc-section-number">5.6.1.1.1</span> PublicKeyType</a></li>
 </ul></li>
-<li><a href="#certificate-envelope"><span class="toc-section-number">5.6.1.2</span> Certificate Envelope</a><ul>
-<li><a href="#security-discussion"><span class="toc-section-number">5.6.1.2.1</span> Security Discussion</a></li>
+<li><a href="#key-agreement-handshake"><span class="toc-section-number">6.4</span> Key Agreement Handshake</a><ul>
+<li><a href="#timing-considerations"><span class="toc-section-number">6.4.1</span> Timing Considerations</a></li>
+<li><a href="#abstract-handshake-interfaces"><span class="toc-section-number">6.4.2</span> Abstract Handshake Interfaces</a><ul>
+<li><a href="#initiator-handshake-interface-ihi"><span class="toc-section-number">6.4.2.1</span> Initiator Handshake Interface (IHI)</a></li>
+<li><a href="#responder-handshake-interface-rhi"><span class="toc-section-number">6.4.2.2</span> Responder Handshake Interface (RHI)</a></li>
 </ul></li>
-<li><a href="#certificate-body"><span class="toc-section-number">5.6.1.3</span> Certificate Body</a></li>
-<li><a href="#extensions"><span class="toc-section-number">5.6.1.4</span> Extensions</a></li>
+<li><a href="#generic-handshake-procedure"><span class="toc-section-number">6.4.3</span> Generic Handshake Procedure</a><ul>
+<li><a href="#initiator-handshake-procedure"><span class="toc-section-number">6.4.3.1</span> Initiator Handshake Procedure</a></li>
+<li><a href="#responder-handshake-procedure"><span class="toc-section-number">6.4.3.2</span> Responder Handshake Procedure</a><ul>
+<li><a href="#processing-requesthandshakebegin"><span class="toc-section-number">6.4.3.2.1</span> Processing RequestHandshakeBegin</a></li>
+<li><a href="#handling-session-auth-request"><span class="toc-section-number">6.4.3.2.2</span> Handling Session Auth Request</a></li>
 </ul></li>
-<li><a href="#certificatechain-validation"><span class="toc-section-number">5.6.2</span> Certificate/Chain Validation</a><ul>
-<li><a href="#trust-anchors"><span class="toc-section-number">5.6.2.1</span> Trust Anchors</a></li>
-<li><a href="#self-signed-certificates"><span class="toc-section-number">5.6.2.2</span> Self-signed Certificates</a></li>
-<li><a href="#verification-procedure"><span class="toc-section-number">5.6.2.3</span> Verification Procedure</a></li>
+</ul></li>
+<li><a href="#security-properties"><span class="toc-section-number">6.4.4</span> Security Properties</a></li>
+<li><a href="#message-exchanges"><span class="toc-section-number">6.4.5</span> Message Exchanges</a></li>
+<li><a href="#handshake-modes"><span class="toc-section-number">6.4.6</span> Handshake Modes</a><ul>
+<li><a href="#shared-secret-mode"><span class="toc-section-number">6.4.6.1</span> Shared secret mode</a><ul>
+<li><a href="#ihi-implementation"><span class="toc-section-number">6.4.6.1.1</span> IHI Implementation</a></li>
+<li><a href="#rhi-implementation"><span class="toc-section-number">6.4.6.1.2</span> RHI Implementation</a></li>
+</ul></li>
+<li><a href="#quantum-key-distribution-qkd-mode"><span class="toc-section-number">6.4.6.2</span> Quantum Key Distribution (QKD) mode</a><ul>
+<li><a href="#ihi-implementation-1"><span class="toc-section-number">6.4.6.2.1</span> IHI Implementation</a></li>
+<li><a href="#rhi-implementation-1"><span class="toc-section-number">6.4.6.2.2</span> RHI Implementation</a></li>
+</ul></li>
+<li><a href="#pre-shared-public-key-mode"><span class="toc-section-number">6.4.6.3</span> Pre-shared public key mode</a><ul>
+<li><a href="#ihi-implementation-2"><span class="toc-section-number">6.4.6.3.1</span> IHI Implementation</a></li>
+<li><a href="#rhi-implementation-2"><span class="toc-section-number">6.4.6.3.2</span> RHI Implementation</a></li>
+<li><a href="#input-key-material-ikm-procedure-responder"><span class="toc-section-number">6.4.6.3.3</span> Input Key Material (IKM) Procedure (Responder)</a></li>
+</ul></li>
+<li><a href="#industrial-certificate-mode"><span class="toc-section-number">6.4.6.4</span> Industrial Certificate Mode</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#sessions"><span class="toc-section-number">6.5</span> Sessions</a><ul>
+<li><a href="#initialization"><span class="toc-section-number">6.5.1</span> Initialization</a></li>
+<li><a href="#invalidation"><span class="toc-section-number">6.5.2</span> Invalidation</a></li>
+<li><a href="#sending-sessiondata"><span class="toc-section-number">6.5.3</span> Sending <code>SessionData</code></a></li>
+<li><a href="#validating-sessiondata"><span class="toc-section-number">6.5.4</span> Validating <code>SessionData</code></a></li>
+<li><a href="#time-to-live"><span class="toc-section-number">6.5.5</span> Time-to-live</a><ul>
+<li><a href="#clock-drift"><span class="toc-section-number">6.5.5.1</span> Clock drift</a></li>
+<li><a href="#setting-the-ttl"><span class="toc-section-number">6.5.5.2</span> Setting the TTL</a></li>
+<li><a href="#disabling-support"><span class="toc-section-number">6.5.5.3</span> Disabling Support</a></li>
+</ul></li>
+<li><a href="#session-crypto-modes"><span class="toc-section-number">6.5.6</span> Session Crypto Modes</a><ul>
+<li><a href="#mac-modes"><span class="toc-section-number">6.5.6.1</span> MAC Modes</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#certificates"><span class="toc-section-number">6.6</span> Certificates</a><ul>
+<li><a href="#icf-definition"><span class="toc-section-number">6.6.1</span> ICF Definition</a><ul>
+<li><a href="#enumerations-2"><span class="toc-section-number">6.6.1.1</span> Enumerations</a><ul>
+<li><a href="#publickeytype"><span class="toc-section-number">6.6.1.1.1</span> PublicKeyType</a></li>
+</ul></li>
+<li><a href="#certificate-envelope"><span class="toc-section-number">6.6.1.2</span> Certificate Envelope</a><ul>
+<li><a href="#security-discussion"><span class="toc-section-number">6.6.1.2.1</span> Security Discussion</a></li>
+</ul></li>
+<li><a href="#certificate-body"><span class="toc-section-number">6.6.1.3</span> Certificate Body</a></li>
+<li><a href="#extensions"><span class="toc-section-number">6.6.1.4</span> Extensions</a></li>
+</ul></li>
+<li><a href="#certificatechain-validation"><span class="toc-section-number">6.6.2</span> Certificate/Chain Validation</a><ul>
+<li><a href="#trust-anchors"><span class="toc-section-number">6.6.2.1</span> Trust Anchors</a></li>
+<li><a href="#self-signed-certificates"><span class="toc-section-number">6.6.2.2</span> Self-signed Certificates</a></li>
+<li><a href="#verification-procedure"><span class="toc-section-number">6.6.2.3</span> Verification Procedure</a></li>
 </ul></li>
 </ul></li>
 </ul></li>
 </ul>
 </div>
-<h1 id="introduction"><span class="header-section-number">1</span> Introduction</h1>
+<h1 id="version-information"><span class="header-section-number">1</span> Version Information</h1>
+<p>SSP21 specifies both a <code>major</code> and <code>minor</code> version number on the wire so that implementations can unambiguously determine compatibility. Changes to the major version indicate that the protocol is no longer wire-compatible with older versions. Changes to the minor version indicate the the protocol was extended in some manner, e.g. additional cryptographic primitives were added to extensible enumerations. Implementations with the same major version and different minor versions will inter-operate so long as only optional modes defined in the earlier minor version are used.</p>
+<p>Changes to this document that do not increment either the major or minor version do not affect wire-level compatibility in any way. They are grammatical or meant to clarify the standard.</p>
+<p>The version specified in this document has major version 0 and minor version 1, i.e. <strong><code>0.1</code></strong>.</p>
+<h1 id="introduction"><span class="header-section-number">2</span> Introduction</h1>
 <p>Secure SCADA Protocol (SSP) is cryptographic wrapper designed to secure point-to-multipoint serial protocols, or to act as a security layer for new SCADA applications. It is intended to fill a gap where existing technologies like TLS are not applicable, or require too much processing power or bandwidth. It can be used as a protocol agnostic bump in the wire (BitW) at initiator endpoints or as a bump in the stack (BitS) on the master or the outstation. No provision is made for retrofitting masters with a BitW as we assume that masters can be much more easily upgraded than outstations.</p>
-<h1 id="requirements"><span class="header-section-number">2</span> Requirements</h1>
+<h1 id="requirements"><span class="header-section-number">3</span> Requirements</h1>
 <p>The following requirements guided the design of the specification and the selection of appropriate companion standards.</p>
-<h2 id="simplicity-of-implementation"><span class="header-section-number">2.1</span> Simplicity of implementation</h2>
+<h2 id="simplicity-of-implementation"><span class="header-section-number">3.1</span> Simplicity of implementation</h2>
 <p>The encodings, state machines, and other technical details of the protocol shall, above all else but without sacrificing security, endeavor to be as simple to implement as possible. Complexity, bells and whistles, and unneeded features inevitably lead to bugs both in specification and implementation.</p>
 <p>A reference implementation shall be developed to inform the evolving design, and shall not be an afterthought. Too often standardization efforts spend too much time on paper, only to lead to designs that are difficult to implement correctly.</p>
-<h2 id="use-only-strong-vetted-cryptography"><span class="header-section-number">2.2</span> Use only strong vetted cryptography</h2>
+<h2 id="use-only-strong-vetted-cryptography"><span class="header-section-number">3.2</span> Use only strong vetted cryptography</h2>
 <p>SSP21 shall only use algorithms that have received prolonged and intense scrutiny from the crypto community. This does not mean that all algorithms need to be NIST approved. Algorithms that are simpler to implement and/or have variations with provably constant-time implementations should be preferred.</p>
-<h2 id="flexible-basis-of-trust"><span class="header-section-number">2.3</span> Flexible Basis of trust</h2>
+<h2 id="flexible-basis-of-trust"><span class="header-section-number">3.3</span> Flexible Basis of trust</h2>
 <p>SSP21 shall allow for trust to be anchored in multiple ways, including:</p>
 <ul>
-<li>Shared secrets, i.e. symmetric cryptography</li>
-<li>Shared public keys, i.e. key-server style key management based on asymmetric cryptography</li>
+<li>Shared secrets, i.e. symmetric cryptography</li>
+<li>Shared public keys, i.e. key-server style key management based on asymmetric cryptography</li>
 <li>Public Key Infrastructure (PKI) wholly controlled by the asset owner, with an efficient certificate format.</li>
 </ul>
 <p>The trade-offs associated with each of these domains is discussed in a later section.</p>
-<h2 id="asymmetric-certificate-revocation"><span class="header-section-number">2.4</span> Asymmetric Certificate Revocation</h2>
+<h2 id="asymmetric-certificate-revocation"><span class="header-section-number">3.4</span> Asymmetric Certificate Revocation</h2>
 <p>Master certificates (certificates that identify masters to outstations), will support a fast expiration scheme in addition to explicit revocation. This works well in an operational environment where the utility has a reliable and isolated IP network between an online authority and multiple master stations. An intermediate authority private key can be used to periodically renew master certificates. Using certificate revocation lists (CRLs) with outstations may be undesirable as outstations may not be able to reach them on a serial channel, and masters would have to push revocation notifications down to each endpoint and ensure that they arrive. Outstations would then have to persist these CRLs in non-volatile memory.</p>
 <p>This scheme requires that outstations have access to an out-of-band time synchronization mechanism such as GPS, local NTP via GPS in a substation, or WWVB. Alternatively, over TCP networks, outstations could check an online CRL.</p>
 <p>Outstation certificates (certificates that identify outstations to masters) will be longer lived, and will be revoked using an online CRL accessible to the masters in the system over a traditional TCP network.</p>
-<h2 id="extensible-only-to-the-extent-necessary"><span class="header-section-number">2.5</span> Extensible only to the extent necessary</h2>
+<h2 id="extensible-only-to-the-extent-necessary"><span class="header-section-number">3.5</span> Extensible only to the extent necessary</h2>
 <ul>
 <li>Endpoints shall be able to identify the protocols version to each other during key exchange.</li>
 <li>Must be secure against protocol downgrade attacks via a mechanism that fully authenticates the handshake.</li>
 <li>The protocol shall use security-suite specifications to allow new algorithms to be used in future versions, or to provide more than one option for when algorithms, inevitably, are compromised.</li>
 <li>The number of initial security suites will be limited to one or two, and will only support authentication.</li>
 </ul>
-<h2 id="authentication"><span class="header-section-number">2.6</span> Authentication</h2>
+<h2 id="authentication"><span class="header-section-number">3.6</span> Authentication</h2>
 <p>All messages shall be authenticated. Each endpoint in the session shall be able to unambiguously determine that a session message comes from the other endpoint. The authentication mechanism shall automatically provide message integrity and protection from spoofing and MitM attacks.</p>
 <p>This authentication will ensure that a particular SCADA master is talking to a particular outstation. In other words, it shall only secure the communication link and will not authenticate individual users or operators of the system. Role Based Access Control (RBAC) and auditing of users is best done at the platform level, and is outside the scope of SSP21. Individual SCADA vendors are free to use different technologies (such as Active Directory, RSA, LDAP, Kerberos, etc.) to manage users at the platform level.</p>
 <p>Particular BitS implementations could potentially use some metadata in certificates to limit or constrain what is allowed during a particular communication session. How this metadata is used or configured to limit permissions for a particular protocol is outside the scope of SSP21.</p>
-<h2 id="protection-from-replay"><span class="header-section-number">2.7</span> Protection from replay</h2>
+<h2 id="protection-from-replay"><span class="header-section-number">3.7</span> Protection from replay</h2>
 <p>Both endpoints of the session shall be able to detect replayed session messages. Although the protocol needs to be secure from replay, it does not necessarily need to ensure that all messages are delivered. SCADA protocols such as DNP3 automatically handle retries at a higher level. The protocol will support two modes: one that strictly enforces packet order over (TCP) and a more tolerant mode that allows any new (non-replayed) packet to pass over serial or UDP.</p>
-<h2 id="session-message-time-to-live-ttl"><span class="header-section-number">2.8</span> Session message time-to-live (TTL)</h2>
+<h2 id="session-message-time-to-live-ttl"><span class="header-section-number">3.8</span> Session message time-to-live (TTL)</h2>
 <p>Since SSP21 is designed to protect control protocols with particular timing constraints, undesirable behavior could occur if an attacker held back one or more authenticated control messages and then replayed them in rapid succession. To reduce the effectiveness of this mode of attack, both parties record their relative time base during session negotiation. Session messages then include a timestamp in milliseconds since the beginning of the session that indicates the last possible moment when the packet should be accepted.</p>
 <p>Implementations will have to make these timing parameters configurable so that they can be tuned for the latency of particular networks. As relative clock drift can occur, sessions may need to be renegotiated more frequently or the configurable validity window of session messages increased appropriately.</p>
-<h2 id="optional-encryption"><span class="header-section-number">2.9</span> Optional encryption</h2>
+<h2 id="optional-encryption"><span class="header-section-number">3.9</span> Optional encryption</h2>
 <p>The secure operation of SCADA systems does not require confidentiality of session traffic under all, or even most, circumstances. Reasons to prefer unencrypted sessions include the ability to inspect traffic with IDS/IPS and denying a potentially opaque tunnel to an adversary.</p>
 <p>Certain systems may exchange sensitive information and require session confidentiality. SSP21 shall use a security suite specification and encodings that allow for encrypted sessions in the future. The session key exchange mechanism shall support forward secrecy.</p>
-<h2 id="perfect-forward-secrecy"><span class="header-section-number">2.10</span> Perfect Forward Secrecy</h2>
+<h2 id="perfect-forward-secrecy"><span class="header-section-number">3.10</span> Perfect Forward Secrecy</h2>
 <p>The protocol shall provide a mode that provides perfect forward secrecy. Namely, if an adversary compromises the long-term private key of an endpoint, they shall not be able to decrypt past sessions.</p>
 <p>This mode is only useful for encrypted session modes, and does not offer any benefit to authentication-only modes.</p>
-<h2 id="support-bump-in-the-wire-retrofits"><span class="header-section-number">2.11</span> Support bump-in-the-wire retrofits</h2>
+<h2 id="support-bump-in-the-wire-retrofits"><span class="header-section-number">3.11</span> Support bump-in-the-wire retrofits</h2>
 <p>Outstation implementations of the protocol shall be capable of being deployed as a bump-in-the-wire (BitW) or integrated into endpoints as a bump-in-the-stack (BitS). BitS integration is preferred, but it is understood that BitW implementations are necessary to retrofit legacy components during transitions.</p>
 <p>Requiring a BitW implementation only for outstations and not masters simplifies requirements as the BitW needn’t be protocol-aware. It can be configured with the static addresses of the outstation and master, and ignore protocol messages addressed for other nodes. In BitW and BitS implementations, all cryptographic operations including key negotiation and authentication will occur at the bump.</p>
-<h2 id="support-serial-and-ip"><span class="header-section-number">2.12</span> Support serial and IP</h2>
+<h2 id="support-serial-and-ip"><span class="header-section-number">3.12</span> Support serial and IP</h2>
 <p>Supporting multi-drop serial means that frames must be addressed in some manner. SSP21 will use 16-bit addressing as this accommodates the addressing scheme used for common existing SCADA protocols. SSP21 will have its own delimiters or length fields, and will use some type of non-cryptographic error detection so that environmental noise is probabilistically filtered out at a level below cryptographic checks for deliberate tampering.</p>
 <p>For some protocols, this new secure serial layer could act as a replacement for redundant functionality in existing protocols. For example, the DNP3 link-layer and transport function could be completely removed in BitS implementations and replaced with the SSP21 crypto and framing layers. SSP21 could also fully wrap the existing protocols, but removing redundancy in certain implementations could provide significant bandwidth savings.</p>
 <p>Out-of-band messages like session key establishment, heartbeats, etc. can only be initiated from the SCADA master side when it attempts to send a normal protocol message. This is because in half-duplex communications the wrapper cannot squelch a reply from a remote by inappropriately using the channel.</p>
-<h2 id="low-overhead"><span class="header-section-number">2.13</span> Low overhead</h2>
+<h2 id="low-overhead"><span class="header-section-number">3.13</span> Low overhead</h2>
 <p>Security is not a zero-cost protocol feature. Inevitably adding a security sub-layer will require a few more bytes on the wire, increase latency, and put a computational burden on endpoints. SSP21 will endeavor to minimize these overheads and provide modes with varying requirements on hardware.</p>
 <ul>
 <li><p><strong>reduced latency</strong> – BitS implementations have a significant advantage in this regard over BitW. HMAC hold back can double latencies in BitW integrations as the entire packet must be received and verified before the first payload byte can be emitted. Some tricks could be played with asymmetric baud rates to minimize this effect. MAC algorithms should be used for which hardware acceleration exists.</p></li>
 <li><p><strong>reduced bandwidth</strong> – It is not uncommon for serial SCADA systems to operate at rates as low as 1200 bits per second. Cryptographic encodings need to be sensitive to tight polling margins. HMACs can be truncated (per <a href="http://csrc.nist.gov/publications/nistpubs/800-107-rev1/sp800-107-rev1.pdf">NIST guidelines</a>) to reduce overhead. BitS integration may be able to remove redundant layers provided by both the SSP21 and the wrapped protocol. An efficient certificate format that utilizes Elliptic Curve Cryptography (ECC) public keys will be used to reduce certificate sizes.</p></li>
 </ul>
-<h1 id="handshake-mode"><span class="header-section-number">3</span> Handshake mode</h1>
+<h1 id="handshake-mode"><span class="header-section-number">4</span> Handshake mode</h1>
 <p>While the primary aim of this specification is describe the protocol in sufficient detail that it can be faithfully implemented, it is important to describe the trade-offs for the various handshake modes that are supported in the protocol. Handshake modes may differ in either the way trust is anchored or in the security properties they provide. This non-normative section of the document describes the relative pros and cons of each mode.</p>
 <p>SSP21 sends the same handshake messages, in the same order, regardless of the handshake mode specified. The messages have roughly the same meaning, but certain fields are interpreted in different ways depending on the mode. The handshake has two request-response phases that can be roughly summarized as follows:</p>
 <ul>
@@ -253,13 +286,13 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li>Each party then transmits its first session data message to authenticate (phase 2 - authentication and optional payload)</li>
 </ul>
 <p>Only phase 1 differs depending on the handshake mode. The authentication in phase 2 and the session itself are identical in all handshake modes. The modes are described informally in the following sections, mostly for the purposes of analyzing the benefits and short-comings of each mode.</p>
-<h2 id="shared-secrets"><span class="header-section-number">3.1</span> Shared secrets</h2>
+<h2 id="shared-secrets"><span class="header-section-number">4.1</span> Shared secrets</h2>
 <p>In this mode, each pair of parties that wishes to communicate must have a shared-secret that both parties possess prior to establishing a session. This secret may be installed manually, or distributed securely using emerging technologies like Quantum Key Distribution (QKD). Security is achieved in knowing that only the other party possesses the same key. This shared secret, along with a random nonce from each endpoint, is then used to establish a set of shared session keys.</p>
 <p>This mode of operation uses symmetric cryptography only, and consequently has a number of advantages:</p>
 <ul>
 <li><p>The entire protocol can be implementing using only a secure hash function if confidentiality is not required.</p></li>
 <li><p>It can be implemented on deeply embedded systems that might not be powerful enough for asymmetric cryptography.</p></li>
-<li><p>It remains secure when a practical quantum computer is developed. The effectiveness of 256-bit shared-secrets will be reduced to 128-bits by Grover's algorithm. All other modes will be vulnerable until practical quantum-resistant public-key algorithms are available.</p></li>
+<li><p>It remains secure when a practical quantum computer is developed. The effectiveness of 256-bit shared-secrets will be reduced to 128-bits by Grover’s algorithm. All other modes will be vulnerable until practical quantum-resistant public-key algorithms are available.</p></li>
 </ul>
 <p>Despite these advantages, there are considerable challenges:</p>
 <ul>
@@ -268,34 +301,35 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><p>If multiple masters are needed for redundancy purposes, the keys must be shared with each master increasing the attack surface and the risk of compromise, or the number of keys in the system must be doubled from N to 2N.</p></li>
 <li><p>Compromise of a field asset always requires that the channel be re-keyed. Full compromise of the master requires that the entire system be re-keyed.</p></li>
 </ul>
-<h2 id="pre-shared-public-keys"><span class="header-section-number">3.2</span> Pre-shared public keys</h2>
+<h2 id="pre-shared-public-keys"><span class="header-section-number">4.2</span> Pre-shared public keys</h2>
 <p>In this architecture, each communication node has an asymmetric key pair. It is free to disseminate the public key, and each node must possess the public key for every other node with which it communicates. It might be pre-configured with these peer public keys, or it might retrieve them from a key server using a secure out-of-band mechanism. This architecture better addresses some of the concerns presented with the symmetric key only architecture, namely:</p>
 <ul>
 <li><p>Multiple masters can be commissioned without doubling the number of keys in the system, however, each outstation must possess the public key of each master with which it must communicate.</p></li>
-<li><p>Only the master's public key(s) need to be shared with commissioning personnel. Each outstation can also secure its private key, and only share the public key. This makes tampering from insiders slightly more difficult than in the symmetric only scheme.</p></li>
+<li><p>Only the master’s public key(s) need to be shared with commissioning personnel. Each outstation can also secure its private key, and only share the public key. This makes tampering from insiders slightly more difficult than in the symmetric only scheme.</p></li>
 </ul>
 <p>A number of potential problems still remain:</p>
 <ul>
-<li><p>Compromise of a master still results in having to update the master's public key on each outstation.</p></li>
+<li><p>Compromise of a master still results in having to update the master’s public key on each outstation.</p></li>
 <li><p>Installing or authorizing additional masters requires either sharing the master private key with the backup master, or installing an additional master public key on all outstations.</p></li>
 </ul>
 <p>SSP21 is able to operate without an authority by using the pre-shared key mode.</p>
-<h2 id="public-keys-authenticated-from-a-root-certificate"><span class="header-section-number">3.3</span> Public keys authenticated from a root certificate</h2>
+<h2 id="public-keys-authenticated-from-a-root-certificate"><span class="header-section-number">4.3</span> Public keys authenticated from a root certificate</h2>
 <p>The recommended mode for managing trust is the PKI mode. In this mode, trust is anchored by a private authority controlled by the utility. Ideally, SCADA masters and field assets (RTUs, gateways, IEDs, etc.) generate a key pair locally, never share the private key with another entity (human or machine), and can freely disseminate the public key for the purposes of certificate generation. The primary role of any PKI is to reduce the complexity of key management by requiring parties to only place their trust in a central signing authority. The identity of all other parties is then established via digital signatures issued by this authority.</p>
-<div class="figure">
-<img src="img/svg/network_architecture.png" alt="Figure 1: Components of the system relevant to SSP21" id="fig:networkarchitecture" />
-<p class="caption"><span>Figure 1:</span> Components of the system relevant to SSP21</p>
+<div id="fig:networkarchitecture" class="fignos">
+<figure>
+<img src="svg/network_architecture.png" alt="Figure 1: Components of the system relevant to SSP21" /><figcaption><span>Figure 1:</span> Components of the system relevant to SSP21</figcaption>
+</figure>
 </div>
 <p>The challenges of running a PKI largely revolve around managing enrollment/revocation and keeping the authority secure. How this PKI is managed is outside the scope of SSP21, however, the following sub-sections discuss such a PKI notionally.</p>
-<h3 id="the-role-of-the-authority"><span class="header-section-number">3.3.1</span> The role of the authority</h3>
+<h3 id="the-role-of-the-authority"><span class="header-section-number">4.3.1</span> The role of the authority</h3>
 <p>The authority in the system possesses a private asymmetric key that it uses to sign certificates. Certificates consist of the following elements:</p>
 <ul>
 <li>A public asymmetric key</li>
-<li>Metadata associated with the public key (e.g. id, validity windows, serial numbers, etc)</li>
+<li>Metadata associated with the public key (e.g. id, validity windows, serial numbers, etc)</li>
 <li>A digital signature over all other data calculated using the authority private key.</li>
 </ul>
 <p>Creating and signing certificates is one of the primary roles of the authority. In its simplest form, this might consist of some cryptographic command line tools on a properly isolated server with a private key and a set of humans with access to this server. Such a basic system might work for small systems.</p>
-<h3 id="issuing-outstation-certificates"><span class="header-section-number">3.3.2</span> Issuing outstation certificates</h3>
+<h3 id="issuing-outstation-certificates"><span class="header-section-number">4.3.2</span> Issuing outstation certificates</h3>
 <p>There are far more outstations in any given SCADA system than the number of masters. Such a statement might seem trivial, however, it is an important insight into how the process of enrollment needs to be streamlined for large systems. In such systems, the authority is envisioned to have a hardened web portal accessible from the corporate LAN. This level of access allows authorized personnel to reach the portal using cellular IP technologies and a VPN.</p>
 <p>The web portal would likely be secured using a commodity TLS certificate and the users authenticated using strong passwords and a second factor like a security token. The authority itself would likely reside in the DMZ, thus proper procedures will need to be followed to provide this access. Prior to commissioning a new field asset, a privileged user would grant the user commissioning the field asset the permission to generate a certificate for the asset. Thus the authority would maintain a database of a few items:</p>
 <ul>
@@ -303,15 +337,15 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li>A means of authenticating users and roles/permissions. This information is likely to come from an external identity management system.</li>
 </ul>
 <p>The database will already be configured by the system administrator with all of the authorized metadata for each certificate in question. The only piece of information the person generating the outstation certificate needs to provide once properly logged in is the outstation public key. Outstation certificates will be very long lived, likely for the lifetime of the equipment. A cryptographic break in the algorithm underlying the certificate signature will require that a new certificate be installed, so this algorithm should be chosen prudently.</p>
-<p>It's important to note that while the authority could be a standalone application with its own complete database of outstations, masters, and users, it might also leverage data available in other systems. For instance, an LDAP server or other enterprise identity system could be used to establish the identity and permissions of users. The authority might also be capable of keeping its database of outstations in the system synchronized with a utility EMS.</p>
+<p>It’s important to note that while the authority could be a standalone application with its own complete database of outstations, masters, and users, it might also leverage data available in other systems. For instance, an LDAP server or other enterprise identity system could be used to establish the identity and permissions of users. The authority might also be capable of keeping its database of outstations in the system synchronized with a utility EMS.</p>
 <p>Allowing system administrators to pre-configure which users can generate certificates for which outstations and providing access to this part of the authority through proper safeguards will substantially streamline the process of enrollment and reduce the extent to which adding security impacts operations. The portal approach also limits direct access to signing keys and provides a central point for creating an audit trail regarding certificate generation.</p>
-<h3 id="revoking-outstation-certificates"><span class="header-section-number">3.3.3</span> Revoking outstation certificates</h3>
+<h3 id="revoking-outstation-certificates"><span class="header-section-number">4.3.3</span> Revoking outstation certificates</h3>
 <p>The master(s) will be capable of reaching a CRL on the authority and will be responsible for checking it at a reasonable interval. The compromise of a single outstation private key is small breach compared to other attack scenarios. Nevertheless, a mechanism must be in place to allow for revocation.</p>
-<h3 id="issuing-master-certificates"><span class="header-section-number">3.3.4</span> Issuing master certificates</h3>
-<p>The recommended way to issue master certificates is machine-to-machine (M2M) communication directly from the master to the authority. The reason for this asymmetry is that on a serial network, there is no path for an outstation to reach a certificate revocation list (CRL), and thus a fast expiration scheme allows master certificates to be &quot;revoked&quot; by virtue of the fact that the authority can refuse to renew them. This expiration should happen on the timescale of hours and not days.</p>
+<h3 id="issuing-master-certificates"><span class="header-section-number">4.3.4</span> Issuing master certificates</h3>
+<p>The recommended way to issue master certificates is machine-to-machine (M2M) communication directly from the master to the authority. The reason for this asymmetry is that on a serial network, there is no path for an outstation to reach a certificate revocation list (CRL), and thus a fast expiration scheme allows master certificates to be “revoked” by virtue of the fact that the authority can refuse to renew them. This expiration should happen on the timescale of hours and not days.</p>
 <p>The compromise of a master private key is a significant security event, since that master may be authorized to control a significant amount of field equipment. There is no fast mechanism for informing outstations on a serial network that a master has been compromised, thus some other mitigation will be needed until the affected certificate expires naturally.</p>
 <p>The communication link between the authority and the masters can be secured using a separate, more-traditional PKI. Since the number of masters in the system is low, it could even use pairs of self-signed certificates where the authority has the public key of every master it needs to authorize. This public key would be used to authenticate the certificate sign request for the certificate to be used to authenticate the master to the outstation.</p>
-<h1 id="the-link-layer"><span class="header-section-number">4</span> The Link Layer</h1>
+<h1 id="the-link-layer"><span class="header-section-number">5</span> The Link Layer</h1>
 <p>SSP21 specifies a two layer architecture. The non-cryptographic link-layer provides three services to the layers above it:</p>
 <ul>
 <li><strong>Framing</strong> - A procedure is defined to identify a frame from a stream of bytes.</li>
@@ -319,7 +353,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><strong>Error detection</strong> - All of the header fields and payload are covered by a cyclic redundancy check (CRC).</li>
 </ul>
 <p>The link-layer defined in this document should only be considered a default that can be deployed when useful. The core of SSP21 is the message-oriented cryptographic layer. Other layers, such as UDP, could provide all the required services provided by the link-layer.</p>
-<p>Since the link-layer does not have any cryptographic protections, it is designed with simplicity in mind and is completely stateless. The CRC is important at this layer to detect data corruption from random sources (EMF, cosmic rays, etc). This check is intended to prevent randomly corrupted payloads from reaching the cryptographic layer. This prevents &quot;tampering&quot; false positives from occurring at the cryptographic layer which would require a completely different organizational response than occasional randomly corrupted frames.</p>
+<p>Since the link-layer does not have any cryptographic protections, it is designed with simplicity in mind and is completely stateless. The CRC is important at this layer to detect data corruption from random sources (EMF, cosmic rays, etc). This check is intended to prevent randomly corrupted payloads from reaching the cryptographic layer. This prevents “tampering” false positives from occurring at the cryptographic layer which would require a completely different organizational response than occasional randomly corrupted frames.</p>
 <pre><code>
 [start][destination][source][length][crc-h][payload][crc-p]
 
@@ -331,7 +365,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p><strong>crc-h</strong> (4-bytes) - A 32-bit CRC value calculated over the header (start, destination, source, and length fields). The CRC polynomial is described in detail in the next section.</p>
 <p><strong>payload</strong> (0 to 4092 bytes) - An opaque payload that is passed to the cryptographic layer. The length is determined by the <em>length</em> field in the header. This length shall never exceed 4092 bytes.</p>
 <p><strong>crc-p</strong> (4-bytes) - A 32-bit CRC value calculated over the payload bytes.</p>
-<h2 id="crc-polynomial"><span class="header-section-number">4.1</span> CRC Polynomial</h2>
+<h2 id="crc-polynomial"><span class="header-section-number">5.1</span> CRC Polynomial</h2>
 <p>The CRC polynomial for the SSP21 link frame was selected based on the Hamming distance (HD) offered by several candidate polynomials at different payload lengths. Our candidates included the following polynomials:</p>
 <table>
 <thead>
@@ -411,22 +445,23 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </table>
 <p>Four byte polynomials can provide significantly better error detection across longer payload lengths. The Koopman and Castagnoli polynomials were discovered using exhaustive search techniques and have significantly longer runs of HD = 6 protection than IEEE 802.3. We selected the Castagnoli polynomial because of slightly better HD=8 coverage for very short frames. The error detection properties of this polynomial have also been independently verified by at least two researchers.</p>
 <p>The maximum HD=6 payload length of 4092 determines the bound for the maximum link layer frame size allowed by the standard.</p>
-<div class="figure">
-<img src="img/svg/stack.png" alt="Figure 2: SSP21 stack - The link and crypto layers are defined in this specification" id="fig:stack" />
-<p class="caption"><span>Figure 2:</span> SSP21 stack - The link and crypto layers are defined in this specification</p>
+<div id="fig:stack" class="fignos">
+<figure>
+<img src="svg/stack.png" alt="Figure 1: SSP21 stack - The link and crypto layers are defined in this specification" /><figcaption><span>Figure 1:</span> SSP21 stack - The link and crypto layers are defined in this specification</figcaption>
+</figure>
 </div>
-<h1 id="cryptographic-layer"><span class="header-section-number">5</span> Cryptographic Layer</h1>
+<h1 id="cryptographic-layer"><span class="header-section-number">6</span> Cryptographic Layer</h1>
 <p>The cryptographic layer is messaged-oriented, meaning that framing of the message is accomplished by the layer(s) beneath it. SSP21 uses a handful of message types to establish secure associations, and then transport user data securely from one party to the other.</p>
-<h2 id="terminology"><span class="header-section-number">5.1</span> Terminology</h2>
-<p>The key agreement handshake in SSP21 is a request-reply protocol, thus are two parties: an <code>initiator</code> and a <code>responder</code>. Normally, the initiator is expected to be the SCADA master, and the responder is expected to be an outstation. It's perfectly possible, however, to flip this relationship in certain circumstances, and have the outstation initiate the key agreement. To preserve the generality of the specification the terms <code>initiator</code> and <code>responder</code> are used in place of master and outstation.</p>
-<h2 id="algorithms"><span class="header-section-number">5.2</span> Algorithms</h2>
+<h2 id="terminology"><span class="header-section-number">6.1</span> Terminology</h2>
+<p>The key agreement handshake in SSP21 is a request-reply protocol, thus are two parties: an <code>initiator</code> and a <code>responder</code>. Normally, the initiator is expected to be the SCADA master, and the responder is expected to be an outstation. It’s perfectly possible, however, to flip this relationship in certain circumstances, and have the outstation initiate the key agreement. To preserve the generality of the specification the terms <code>initiator</code> and <code>responder</code> are used in place of master and outstation.</p>
+<h2 id="algorithms"><span class="header-section-number">6.2</span> Algorithms</h2>
 <p>SSP21 uses a number of cryptographic algorithms. They are described here within the context of the functionality they provide. The initial SSP21 specification contains a minimal subset of algorithms, but the protocol is capable of extension.</p>
 <p>The following notation will be used in algorithm pseudo-code:</p>
 <ul>
 <li>The <code>||</code> operator denotes the concatenation of two byte sequences.</li>
 <li>The <code>[b1, b2, .. bn]</code> syntax denotes a, possibly empty, byte sequence.</li>
 </ul>
-<h3 id="diffie-hellman-dh-functions"><span class="header-section-number">5.2.1</span> Diffie-Hellman (DH) functions</h3>
+<h3 id="diffie-hellman-dh-functions"><span class="header-section-number">6.2.1</span> Diffie-Hellman (DH) functions</h3>
 <p>SSP21 currently only supports Curve25519 for session key agreement. It is described in detail in <a href="https://www.ietf.org/rfc/rfc7748.txt">RFC 7748</a>.</p>
 <table>
 <thead>
@@ -449,7 +484,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul>
 <!--- RLC: Should perhaps mention, as in the RFC, to check for all zeroes. -->
 <!--- JAC: Yes, definitely. Keeping these comments here as a reminder. -->
-<h3 id="hash-functions"><span class="header-section-number">5.2.2</span> Hash Functions</h3>
+<h3 id="hash-functions"><span class="header-section-number">6.2.2</span> Hash Functions</h3>
 <p>SSP21 currently only supports SHA256 described in <a href="http://csrc.nist.gov/publications/fips/fips180-4/fips-180-4.pdf">FIPS 190-4</a>. SHA512 and/or hash function from the BLAKE family will likely be supported in the future. The hash function serves two roles:</p>
 <ul>
 <li><p>Maintain a hash of all data sent and received during the key negotiation sequence. This running hash is then incorporated into the authentication signatures and makes any tampering of handshake data detectable.</p></li>
@@ -469,36 +504,39 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </tr>
 </tbody>
 </table>
-<h3 id="hashed-message-authentication-code-hmac"><span class="header-section-number">5.2.3</span> Hashed Message Authentication Code (HMAC)</h3>
+<h3 id="hashed-message-authentication-code-hmac"><span class="header-section-number">6.2.3</span> Hashed Message Authentication Code (HMAC)</h3>
 <p>HMAC provides an authentication tag given a shared key and an input message. It is described in <a href="https://www.ietf.org/rfc/rfc2104.txt">RFC 2104</a>. Any hash algorithm described above can be used in conjunction with this construct, and the corresponding HMAC function will produce a tag with the same length as the underlying hash function.</p>
 <p><code>HMAC(key, message) -&gt; AuthTag</code> - Calculate an authentication tag from an arbitrary length symmetric key and message bytes.</p>
-<h3 id="key-derivation-function-kdf"><span class="header-section-number">5.2.4</span> Key Derivation Function (KDF)</h3>
+<h3 id="authenticated-encryption-with-associated-data-aead"><span class="header-section-number">6.2.4</span> Authenticated Encryption with Associated Data (AEAD)</h3>
+<p>This specification describes how to apply AEAD constructs to both authenticate and encrypt session data. AEAD constructs are used in a so called “detached” more when the authentication tag is placed in separate field from the encrypted data. This specification only describes the usage of AEAD constructs that use CTR mode for the encryption operation, and therefore do not require any additional padding. These algorithms include AES-GCM and ChaCha20-Poly1305.</p>
+<p>AEAD functions typically accept a nonce larger than the 16-bit nonce used in SSP21. When mapping an AEAD to the SSP21 nonce, the 16-bit nonce shall be placed in the lowest (first) 2 bytes of the nonce buffer in big endian format, and higher bytes shall be set to zero.</p>
+<h3 id="key-derivation-function-kdf"><span class="header-section-number">6.2.5</span> Key Derivation Function (KDF)</h3>
 <p>SSP21 has extensible support for an abstract KDF used during the handshake process.</p>
 <p>All KDFs take <code>salt</code> and <code>input_key_material</code> parameters and return two keys, each 32-bytes in length.</p>
 <pre><code>  KDF(salt, input_key_material) -&gt; (key1, key2)</code></pre>
 <p>The <code>salt</code> shall always be a publicly known, yet randomized value not controlled by either party independently. The <code>input_key_material</code> shall always be, at least partially, a high entropy secret value known only to the two parties.</p>
-<h4 id="hkdf"><span class="header-section-number">5.2.4.1</span> HKDF</h4>
+<h4 id="hkdf"><span class="header-section-number">6.2.5.1</span> HKDF</h4>
 <p>The default KDF is HKDF defined in <a href="https://www.ietf.org/rfc/rfc5869.txt">RFC 5869</a>.</p>
-<p>HKDF is always be used to derive a pair of 256-bit session keys. This is simple to implement when the block size of the hash function is also 32-bytes (e.g. SHA-256):</p>
-<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">HKDF(salt, input_key_material) -&gt; (key1, key2)
-{
-    <span class="co">// extract</span>
-    set temp_key = HMAC(salt, input_key_material)
-    <span class="co">// specialized expand</span>
-    set key1 = HMAC(temp_key, [<span class="bn">0x01</span>])
-    set key2 = HMAC(temp_key, key1 || [<span class="bn">0x02</span>])
-    <span class="cf">return</span> (key1, key2)
-}</code></pre></div>
-<h3 id="csprng"><span class="header-section-number">5.2.5</span> CSPRNG</h3>
+<p>HKDF is always be used to derive a pair of 256-bit session keys. This is simple to implement when the block size of the hash function is also 32-bytes (e.g. SHA-256):</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb3-1" title="1">HKDF(salt, input_key_material) -&gt; (key1, key2)</a>
+<a class="sourceLine" id="cb3-2" title="2">{</a>
+<a class="sourceLine" id="cb3-3" title="3">    <span class="co">// extract</span></a>
+<a class="sourceLine" id="cb3-4" title="4">    set temp_key = HMAC(salt, input_key_material)</a>
+<a class="sourceLine" id="cb3-5" title="5">    <span class="co">// specialized expand</span></a>
+<a class="sourceLine" id="cb3-6" title="6">    set key1 = HMAC(temp_key, [<span class="bn">0x01</span>])</a>
+<a class="sourceLine" id="cb3-7" title="7">    set key2 = HMAC(temp_key, key1 || [<span class="bn">0x02</span>])</a>
+<a class="sourceLine" id="cb3-8" title="8">    <span class="cf">return</span> (key1, key2)</a>
+<a class="sourceLine" id="cb3-9" title="9">}</a></code></pre></div>
+<h3 id="csprng"><span class="header-section-number">6.2.6</span> CSPRNG</h3>
 <p>A cryptographically secure pseudo-random number generator (CSPRNG) is required for different functions, depending on the handshake mode:</p>
 <ul>
 <li>the generation of ephemeral DH keys in all public-key modes that provide forward secrecy</li>
 <li>the generation of random nonces in symmetric key modes.</li>
 </ul>
 <p>Any secure RNG will do, put implementers should err on the side of caution and prefer one provided by the operating system, or a wrapper provided by a trusted library.</p>
-<h2 id="messages"><span class="header-section-number">5.3</span> Messages</h2>
+<h2 id="messages"><span class="header-section-number">6.3</span> Messages</h2>
 <p>Every message at the cryptographic layer begins with a one octet message type identifier called the <code>Function</code> enumeration. The remaining octets are interpreted according the defined structure of that type.</p>
-<h3 id="syntax"><span class="header-section-number">5.3.1</span> Syntax</h3>
+<h3 id="syntax"><span class="header-section-number">6.3.1</span> Syntax</h3>
 <p>SSP21 uses a formal syntax to define the contents of messages. Using such a syntax has a number of advantages:</p>
 <ul>
 <li>The syntax separates the contents of messages from how they are serialized on the wire</li>
@@ -513,7 +551,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li>Self-describing serialization is not an objective like the tag, length, value (TLV) serialization in ASN.1 BER or DER.</li>
 <li>The amount of memory a message will require to deserialize is always a constant known at compile-time.</li>
 </ul>
-<h4 id="structs"><span class="header-section-number">5.3.1.1</span> Structs</h4>
+<h4 id="structs"><span class="header-section-number">6.3.1.1</span> Structs</h4>
 <p>Groupings of fields are called Structs. Structs use the following syntax:</p>
 <pre><code>struct &lt;struct-name&gt; {
   &lt;field1-name&gt; : &lt;field1-type&gt;
@@ -543,7 +581,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 }</code></pre>
 <p>The serialized size of a <code>Flowers</code> struct would always be 7 bytes:</p>
 <pre><code>sizeof(U8) + sizeof(U16) + sizeof(U32) == 7</code></pre>
-<h4 id="enumerations"><span class="header-section-number">5.3.1.2</span> Enumerations</h4>
+<h4 id="enumerations"><span class="header-section-number">6.3.1.2</span> Enumerations</h4>
 <p>Single byte enumerations are defined with the following syntax:</p>
 <pre><code>enum &lt;enum-name&gt; {
   &lt;name1&gt; : &lt;value1&gt;
@@ -566,71 +604,88 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
   color : enum::COLOR
   value : U8
 }</code></pre>
-<h4 id="bit-fields"><span class="header-section-number">5.3.1.3</span> Bit fields</h4>
+<h4 id="bit-fields"><span class="header-section-number">6.3.1.3</span> Bit fields</h4>
 <p>Bit fields are single-byte members of <em>Structs</em> or <em>Messages</em> that encode up to eight boolean values, one value for each bit using the following syntax:</p>
 <pre><code>bitfield &lt;bitfield-name&gt; { &lt;top-bit-name&gt;, ... &lt;bottom-bit-name&gt; }</code></pre>
 <p>Bit fields can have zero to eight member bits. The top bit (0x80) is always implicitly defined first in the list of bit names. Unspecified bits shall always be encoded as zero. Parsers shall fail parsing if any unspecified bit is set in the input.</p>
 <pre><code>bitfield Flags { &quot;flag1&quot;, &quot;flag2&quot;, &quot;flag3&quot; }</code></pre>
 <p>The bit-field above with flag1 = true, flag2 = false, and flag3 = true would have a serialized representation of 0b10100000 (0xA0). An example of input that would fail a parsing for this bit field is 0b10100010 (0XA2).</p>
-<h4 id="sequences"><span class="header-section-number">5.3.1.4</span> Sequences</h4>
+<h4 id="sequences"><span class="header-section-number">6.3.1.4</span> Sequences</h4>
 <p><code>Sequences</code> are variable length lists of a particular type. There are two categories of sequences:</p>
 <ul>
 <li><strong><code>SeqOf[Byte]</code></strong> - Denotes a sequence of bytes, like a key, signature, etc.</li>
 <li><strong><code>SeqOf[&lt;struct type&gt;]</code></strong> - Denotes a sequence of a defined structure type.</li>
 </ul>
-<h5 id="variable-length-count"><span class="header-section-number">5.3.1.4.1</span> Variable Length Count</h5>
-<p>When serialized, all sequence types are prefixed with a variable length count of objects up to 2^32 - 1 (unsigned 32-bit integer). The number of bytes required to encode various values is summarized in the table below.</p>
+<h5 id="variable-length-count"><span class="header-section-number">6.3.1.4.1</span> Variable Length Count</h5>
+<p>When serialized, all sequence types are prefixed with a variable length count of objects up to 2^32 - 1 (unsigned 32-bit integer). This encoding is similar to the ASN.1 DER encoding of length, but places a constraint on the maximum value. The table below summarizes boundary values and their encodings.</p>
 <table>
 <thead>
 <tr class="header">
 <th>num bytes</th>
-<th># value bits</th>
-<th>max value</th>
-<th>encoding of max value</th>
+<th>value</th>
+<th>encoding</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>1</td>
-<td>7</td>
-<td>127</td>
-<td>[ 0xFF, 0x7F ]</td>
+<td>0 (min)</td>
+<td>[0x00]</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>127 (max)</td>
+<td>[0x7F]</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>128 (min)</td>
+<td>[0x81, 0x80]</td>
 </tr>
 <tr class="even">
 <td>2</td>
-<td>14</td>
-<td>16383</td>
-<td>[ 0xFF, 0x7F ]</td>
+<td>255 (max)</td>
+<td>[0x81, 0xFF]</td>
 </tr>
 <tr class="odd">
 <td>3</td>
-<td>21</td>
-<td>2097151</td>
-<td>[ 0xFF, 0xFF, 0x7F ]</td>
+<td>256 (min)</td>
+<td>[0x82, 0x01, 0x00]</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>65535 (max)</td>
+<td>[0x82, 0xFF, 0xFF]</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>65536 (min)</td>
+<td>[0x83, 0x01, 0x00, 0x00]</td>
 </tr>
 <tr class="even">
 <td>4</td>
-<td>28</td>
-<td>268435455</td>
-<td>[ 0xFF, 0xFF, 0xFF, 0x7F ]</td>
+<td>16777215 (max)</td>
+<td>[0x83, 0xFF, 0xFF, 0xFF]</td>
 </tr>
 <tr class="odd">
 <td>5</td>
-<td>32</td>
-<td>4294967295</td>
-<td>[ 0xFF, 0xFF, 0xFF, 0xFF, 0x0F ]</td>
+<td>16777216 (min)</td>
+<td>[0x84, 0x01, 0x00, 0x00, 0x00]</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>4294967295 (max)</td>
+<td>[0x84, 0xFF, 0xFF, 0xFF, 0xFF]</td>
 </tr>
 </tbody>
 </table>
-<p>The following rules apply to decoding:</p>
-<ol style="list-style-type: decimal">
-<li>The value is read from the least significant bit to the most significant bit.</li>
-<li>The top bit (0x80) of the current byte indicates if another byte follows.</li>
-<li>The bottom 7 bits are incorporated by shifting the values into the number modulo 7</li>
-<li>There is only one valid encoding for any number and that encoding must use the fewest bytes possible.</li>
-<li>The value of the 5th byte may not exceed 0x0F.</li>
+<p>The following rules apply to encoding and decoding:</p>
+<ol type="1">
+<li>The first byte may represent a number in the interval [0,127] OR if the top bit is set, the lower 7 bits encode the count of bytes that follow.</li>
+<li>If the top bit of the first byte is set, the lower 7 bits may only be one of a value in the range 1 to 4.</li>
+<li>Values shall always be encoded in the fewest bytes possible, and parsers shall always reject such invalid encodings.</li>
 </ol>
-<h5 id="examples"><span class="header-section-number">5.3.1.4.2</span> Examples</h5>
+<h5 id="examples"><span class="header-section-number">6.3.1.4.2</span> Examples</h5>
 <p>An example of a struct containing a sequence of bytes:</p>
 <pre><code>struct ByteSequence {
   value : SeqOf[Byte]
@@ -652,10 +707,10 @@ struct Pairs {
 <p>The serialized Pairs message would be encoded as:</p>
 <pre><code>[0x03, 0x07, 0x08, 0x08, 0x09, 0x0A, 0xCC]</code></pre>
 <p>The first value of <code>0x03</code> is the variable length and indicates that there are 3 NumberPair structs in the sequence. The encoded NumberPair structs directly follow this count of objects.</p>
-<h4 id="constraints"><span class="header-section-number">5.3.1.5</span> Constraints</h4>
+<h4 id="constraints"><span class="header-section-number">6.3.1.5</span> Constraints</h4>
 <p>Certain field types have optional or mandatory constraints placed on their contents. Constraints on a field are expressed with the following notation:</p>
 <pre><code>&lt;field-name&gt; : &lt;field-type&gt;(&lt;id-1&gt; = &lt;value-1&gt;, ..., &lt;id-N&gt; = &lt;value-N&gt;)</code></pre>
-<p>Any field without the trailing constraint syntax (...) is implicitly defined to have no constraints.</p>
+<p>Any field without the trailing constraint syntax (…) is implicitly defined to have no constraints.</p>
 <p>For example, a sequence of bytes may have a <code>count</code> constraint that defines the required number of elements for the sequence.</p>
 <pre><code>struct SomeStruct {
   id : SeqOf[U8](count = 16)
@@ -697,10 +752,10 @@ struct Pairs {
 </tr>
 </tbody>
 </table>
-<h3 id="definitions"><span class="header-section-number">5.3.2</span> Definitions</h3>
-<h4 id="enumerations-1"><span class="header-section-number">5.3.2.1</span> Enumerations</h4>
+<h3 id="definitions"><span class="header-section-number">6.3.2</span> Definitions</h3>
+<h4 id="enumerations-1"><span class="header-section-number">6.3.2.1</span> Enumerations</h4>
 <p>Common enumeration types that are used in one or more messages are defined here.</p>
-<h5 id="function"><span class="header-section-number">5.3.2.1.1</span> Function</h5>
+<h5 id="function"><span class="header-section-number">6.3.2.1.1</span> Function</h5>
 <p>SSP21 message definitions always begin with a fixed value of the <em>Function</em> enumeration. This fixed value allows a parser to determine the type of the message by inspecting the first byte of an opaque message delivered by the link layer. The correct message-specific parser can then be invoked.</p>
 <pre><code>enum Function {
     REQUEST_HANDSHAKE_BEGIN  : 0
@@ -708,17 +763,17 @@ struct Pairs {
     REPLY_HANDSHAKE_ERROR    : 2
     SESSION_DATA             : 3
 }</code></pre>
-<h5 id="session-nonce-mode"><span class="header-section-number">5.3.2.1.2</span> Session Nonce Mode</h5>
+<h5 id="session-nonce-mode"><span class="header-section-number">6.3.2.1.2</span> Session Nonce Mode</h5>
 <p>The <code>SessionNonceMode</code> enumeration specifies how the nonce (aka message counter) is verified to protect packets from replay.</p>
 <pre><code>enum SessionNonceMode {
-    INCREMENT_LAST_RX : 0
-    GREATER_THAN_LAST_RX : 1
+    STRICT_INCREMENT : 0
+    GREATER_THAN_LAST : 1
 }</code></pre>
 <ul>
-<li><p><strong><code>INCREMENT_LAST_RX</code></strong> - The receiver of a session message will verify that each received nonce is strictly equal to the last valid nonce plus one. This is the default mode and should always be used in session oriented environments like TCP that provide stream integrity and ordering guarantees.</p></li>
-<li><p><strong><code>GREATER_THAN_LAST_RX</code></strong> - The receiver of a session message will verify that each received is greater the last valid nonce. This mode is intended to be used in session-less environments like serial or UDP and allows for loss of authenticated packets, but also relaxes security allowing a MitM to selectively drop messages from a session. The protocol being protected by SSP21 is then responsible for retrying transmission in session-less environments.</p></li>
+<li><p><strong><code>STRICT_INCREMENT</code></strong> - The receiver of a session message will verify that each received nonce is strictly equal to the last valid nonce plus one. This is the default mode and should always be used in session oriented environments like TCP that provide stream integrity and ordering guarantees.</p></li>
+<li><p><strong><code>GREATER_THAN_LAST</code></strong> - The receiver of a session message will verify that each received is greater the last valid nonce. This mode is intended to be used in session-less environments like serial or UDP and allows for loss of authenticated packets, but also relaxes security allowing a MitM to selectively drop messages from a session. The protocol being protected by SSP21 is then responsible for retrying transmission in session-less environments.</p></li>
 </ul>
-<h5 id="handshake-ephemeral"><span class="header-section-number">5.3.2.1.3</span> Handshake Ephemeral</h5>
+<h5 id="handshake-ephemeral"><span class="header-section-number">6.3.2.1.3</span> Handshake Ephemeral</h5>
 <p>The <code>HandshakeEphemeral</code> enumeration specifies what the contents of the <code>ephemeral_data</code> field of the handshake request/reply contain.</p>
 <pre><code>enum HandshakeEphemeral {
     X25519 : 0
@@ -730,7 +785,7 @@ struct Pairs {
 <li><strong><code>NONCE</code></strong> - A 32-byte random nonce</li>
 <li><strong><code>NONE</code></strong> - Empty value</li>
 </ul>
-<h5 id="handshake-hash"><span class="header-section-number">5.3.2.1.4</span> Handshake Hash</h5>
+<h5 id="handshake-hash"><span class="header-section-number">6.3.2.1.4</span> Handshake Hash</h5>
 <p>The <code>HandshakeHash</code> enumeration specifies which hash algorithm will be used during the key agreement handshake to prevent tampering.</p>
 <pre><code>enum HandshakeHash {
     SHA256 : 0
@@ -738,7 +793,7 @@ struct Pairs {
 <ul>
 <li><strong><code>SHA256</code></strong> - Use SHA256</li>
 </ul>
-<h5 id="handshake-kdf"><span class="header-section-number">5.3.2.1.5</span> Handshake KDF</h5>
+<h5 id="handshake-kdf"><span class="header-section-number">6.3.2.1.5</span> Handshake KDF</h5>
 <p>The <code>HandshakeKDF</code> enumeration specifies which KDF is used to derive session keys and intermediate keys.</p>
 <pre><code>enum HandshakeKDF {
     HKDF_SHA256 : 0
@@ -746,31 +801,34 @@ struct Pairs {
 <ul>
 <li><code>HKDF_SHA256</code> - Use HKDF where the HMAC is HMAC-SHA256</li>
 </ul>
-<h5 id="session-crypto-mode"><span class="header-section-number">5.3.2.1.6</span> Session Crypto Mode</h5>
+<h5 id="session-crypto-mode"><span class="header-section-number">6.3.2.1.6</span> Session Crypto Mode</h5>
 <p>The <code>SessionCryptoMode</code> enumeration specifies the complete set of algorithms used to authenticate (and optionally encrypt) the session.</p>
 <pre><code>enum SessionCryptoMode {
     HMAC_SHA256_16 : 0
+    AES_256_GCM    : 1
 }</code></pre>
 <ul>
 <li><strong><code>HMAC_SHA256_16</code></strong> - Cleartext user data with the authentication tag set to HMAC-SHA256 truncated to the leftmost 16 bytes.</li>
+<li><strong><code>AES_256_GCM</code></strong> - AES-256 in GCM mode.</li>
 </ul>
-<h5 id="handshake-mode-1"><span class="header-section-number">5.3.2.1.7</span> Handshake Mode</h5>
+<p><strong>Note: </strong> AEAD modes have their nonce’s length extended as required by the particular algorithm, with the 16-bit SSP21 nonce in the lowest order 2 bytes in big-endian format. Higher order bytes are set to zero.</p>
+<h5 id="handshake-mode-1"><span class="header-section-number">6.3.2.1.7</span> Handshake Mode</h5>
 <p>The <code>HandshakeMode</code> enumeration specifies which procedure both parties use to derive session keys. Each mode interprets certain fields in the handshake messages in different ways.</p>
 <pre><code>enum HandshakeMode {
     SHARED_SECRET : 0
-    PRESHARED_PUBLIC_KEYS : 1
-    INDUSTRIAL_CERTIFICATES : 2
-    QUANTUM_KEY_DISTRIBUTION : 3
+    PUBLIC_KEYS : 1
+    QUANTUM_KEY_DISTRIBUTION : 2
+    INDUSTRIAL_CERTIFICATES : 3    
 }</code></pre>
 <!-- TODO: link the handshake section -->
 <p><strong>Note: </strong> Refer to the handshake section for how each mode shall interpret handshake message fields.</p>
 <ul>
 <li><strong><code>SHARED_SECRET</code></strong> - Both parties possess a shared-secret.</li>
-<li><strong><code>PRESHARED_PUBLIC_KEYS</code></strong> - Both parties have out-of-band knowledge of each other's public DH key.</li>
-<li><strong><code>INDUSTRIAL_CERTIFICATES</code></strong> - Both parties use an authority certificate to authenticate each other's public DH key from a certificate chain.</li>
+<li><strong><code>PUBLIC_KEYS</code></strong> - Both parties have out-of-band knowledge of each other’s public DH key.</li>
 <li><strong><code>QUANTUM_KEY_DISTRIBUTION</code></strong> - Single-use shared secrets delivered via quantum key distribution (QKD).</li>
+<li><strong><code>INDUSTRIAL_CERTIFICATES</code></strong> - Both parties use an authority certificate to authenticate each other’s public DH key from a certificate chain.</li>
 </ul>
-<h5 id="handshake-error"><span class="header-section-number">5.3.2.1.8</span> Handshake Error</h5>
+<h5 id="handshake-error"><span class="header-section-number">6.3.2.1.8</span> Handshake Error</h5>
 <p>The <code>HandshakeError</code> enumeration denotes an error condition that occurred during the handshake process.</p>
 <pre><code>enum HandshakeError {
     BAD_MESSAGE_FORMAT                : 0
@@ -783,7 +841,7 @@ struct Pairs {
     UNSUPPORTED_HANDSHAKE_MODE        : 7
     BAD_CERTIFICATE_FORMAT            : 8
     BAD_CERTIFICATE_CHAIN             : 9
-    UNSUPPORTED_CERTIFICATE_FEATURE   : 10    
+    UNSUPPORTED_CERTIFICATE_FEATURE   : 10
     AUTHENTICATION_ERROR              : 11
     NO_PRIOR_HANDSHAKE_BEGIN          : 12
     KEY_NOT_FOUND                     : 13
@@ -791,9 +849,9 @@ struct Pairs {
 }</code></pre>
 <p><strong>Note: </strong>Implementations shall <strong>NEVER</strong> define custom error codes as this can allow implementation fingerprinting.</p>
 <ul>
-<li><p><strong><code>BAD_MESSAGE_FORMAT</code></strong> - A received handshake message was malformed in some manner, i.e. it was improperly encoded.</p></li>
+<li><p><strong><code>BAD_MESSAGE_FORMAT</code></strong> - A received handshake message was malformed in some manner, i.e. it was improperly encoded.</p></li>
 <li><p><strong><code>UNSUPPORTED_VERSION</code></strong> - The specified protocol version is not supported.</p></li>
-<li><p><strong><code>UNSUPPORTED_HANDSHAKE_EPHEMERAL</code></strong> - The requested handshake ephemeral is not supported or doesn't match the handshake mode.</p></li>
+<li><p><strong><code>UNSUPPORTED_HANDSHAKE_EPHEMERAL</code></strong> - The requested handshake ephemeral is not supported or doesn’t match the handshake mode.</p></li>
 <li><p><strong><code>UNSUPPORTED_HANDSHAKE_HASH</code></strong> - The requested hash algorithm is not supported.</p></li>
 <li><p><strong><code>UNSUPPORTED_HANDSHAKE_KDF</code></strong> - The requested KDF algorithm is not supported.</p></li>
 <li><p><strong><code>UNSUPPORTED_SESSION_MODE</code></strong> - The requested session mode is not supported.</p></li>
@@ -807,8 +865,14 @@ struct Pairs {
 <li><p><strong><code>KEY_NOT_FOUND</code></strong> - In QKD mode, the requested key id was not found.</p></li>
 <li><p><strong><code>UNKNOWN</code></strong> - A error code for any unforeseen condition or implementation specific error.</p></li>
 </ul>
-<h4 id="handshake-messages"><span class="header-section-number">5.3.2.2</span> Handshake Messages</h4>
-<h5 id="request-handshake-begin"><span class="header-section-number">5.3.2.2.1</span> Request Handshake Begin</h5>
+<h4 id="handshake-messages"><span class="header-section-number">6.3.2.2</span> Handshake Messages</h4>
+<h5 id="version"><span class="header-section-number">6.3.2.2.1</span> Version</h5>
+<p>All handshake messages contain a version field that allows implementations to determine compatibility and to aid in debugging remotely when compatibility issues arise.</p>
+<pre><code>struct Version {
+   major : U16
+   minor : U16
+}</code></pre>
+<h5 id="request-handshake-begin"><span class="header-section-number">6.3.2.2.2</span> Request Handshake Begin</h5>
 <p>The initiator starts the process of establishing a new session by sending the <code>RequestHandshakeBegin</code> message. This message contains a specification of all of the abstract algorithms to be used during the handshake and the session.</p>
 <pre><code>struct CryptoSpec {
    handshake_ephemeral      : enum::HandshakeEphemeral
@@ -835,7 +899,7 @@ struct Pairs {
 </ul>
 <pre><code>message RequestHandshakeBegin {
    function                 : enum::Function::REQUEST_HANDSHAKE_BEGIN
-   version                  : U16
+   version                  : struct::Version
    crypto_spec              : struct::CryptoSpec
    constraints              : struct::Constraints
    handshake_mode           : enum::HandshakeMode
@@ -850,27 +914,29 @@ struct Pairs {
 <li><p><strong><code>ephemeral_data</code></strong> - An ephemeral nonce or public DH key corresponding to the <code>handshake_ephemeral</code> in the <code>CryptoSpec</code> and possibly constrained by the <code>handshake_mode</code>.</p></li>
 <li><p><strong><code>mode_data</code></strong> - Additional data interpreted according to the <code>handshake_mode</code>. Whether this field is empty or not depends on the mode.</p></li>
 </ul>
-<h5 id="reply-handshake-begin"><span class="header-section-number">5.3.2.2.2</span> Reply Handshake Begin</h5>
+<h5 id="reply-handshake-begin"><span class="header-section-number">6.3.2.2.3</span> Reply Handshake Begin</h5>
 <p>The responder replies to <code>RequestHandshakeBegin</code> by sending <code>ReplyHandshakeBegin</code>, unless an error occurs in which case it responds with <code>ReplyHandshakeError</code>.</p>
 <pre><code>message ReplyHandshakeBegin {
-   function : enum::Function::REPLY_HANDSHAKE_BEGIN
-   ephemeral_data: SeqOf[U8]
-   mode_data: SeqOf[U8]
+   function       : enum::Function::REPLY_HANDSHAKE_BEGIN
+   version        : struct::Version
+   ephemeral_data : SeqOf[U8]
+   mode_data      : SeqOf[U8]
 }</code></pre>
 <ul>
 <li><p><strong><code>ephemeral_data</code></strong> - An ephemeral nonce or public DH key interpreted according to the <code>handshake_mode</code> and corresponding to the <code>handshake_ephemeral</code> in the <code>CryptoSpec</code> and interpreted according</p></li>
 <li><p><strong><code>mode_data</code></strong> - Additional data data interpreted according to the <code>handshake_mode</code>.</p></li>
 </ul>
-<h5 id="reply-handshake-error"><span class="header-section-number">5.3.2.2.3</span> Reply Handshake Error</h5>
+<h5 id="reply-handshake-error"><span class="header-section-number">6.3.2.2.4</span> Reply Handshake Error</h5>
 <p>The outstation shall reply to a <code>RequestHandshakeBegin</code> with a <em>ReplyHandshakeError</em> message if an error occurs. This message is for debugging purposes only during commissioning and cannot be authenticated.</p>
 <pre><code>message ReplyHandshakeError {
    function : enum::Function::REPLY_HANDSHAKE_ERROR
-   error : enum::HandshakeError
+   version  : struct::Version
+   error    : enum::HandshakeError
 }</code></pre>
 <ul>
 <li><strong><code>error</code></strong> - An error code that enumerates possible error conditions that can occur during the handshake.</li>
 </ul>
-<h5 id="session-data"><span class="header-section-number">5.3.2.2.4</span> Session Data</h5>
+<h5 id="session-data"><span class="header-section-number">6.3.2.2.5</span> Session Data</h5>
 <p>Session data messages perform two functions:</p>
 <ul>
 <li><p>They authenticate the initial handshake when transmitted with nonce == 0.</p></li>
@@ -896,8 +962,8 @@ struct Pairs {
 <li><p><strong><code>user_data</code></strong> - A blob of (possibly encrypted) user data.</p></li>
 <li><p><strong><code>auth_tag</code></strong> - A tag used to authenticate the message.</p></li>
 </ul>
-<h2 id="key-agreement-handshake"><span class="header-section-number">5.4</span> Key Agreement Handshake</h2>
-<p>Key agreement in SSP21 is a single request/response message exchange whereby both parties derive a common set of session keys using a procedure determined by the <code>HandshakeMode</code> specified by the initiator. This initial message exchange does not authenticate the parties to each other. The parties must then prove to each-other that they derived the same keys by then transmitting an initial <code>SessionData</code> message in each direction. A successful handshake involves the exchange of the four messages depicted in figure <a href="#fig:handshake">3</a>.</p>
+<h2 id="key-agreement-handshake"><span class="header-section-number">6.4</span> Key Agreement Handshake</h2>
+<p>Key agreement in SSP21 is a single request/response message exchange whereby both parties derive a common set of session keys using a procedure determined by the <code>HandshakeMode</code> specified by the initiator. This initial message exchange does not authenticate the parties to each other. The parties must then prove to each-other that they derived the same keys by then transmitting an initial <code>SessionData</code> message in each direction. A successful handshake involves the exchange of the four messages depicted in figure <a href="#fig:handshake">1</a>.</p>
 <p>The same messages are exchanged in the same order, regardless of which <code>HandshakeMode</code> is in use. Only the interpretation of certain fields and the procedure for deriving sessions keys differs between modes. The authentication step is always identical for every mode. The steps for a successful handshake are summarized below.</p>
 <ul>
 <li>Mode specification and key derivation (1-RTT)
@@ -915,7 +981,7 @@ struct Pairs {
 <p>These initial <code>SessionData</code> messages with nonce equal to zero are syntactically identical to other <code>SessionData</code> messages, however, the following differences apply:</p>
 <ul>
 <li>The nonce of zero identifies that they are a special case, and are processed according to special rules.</li>
-<li>A responder may reply to an initiator's initial <code>SessionData</code> message with a <code>ReplyHandshakeError</code>.</li>
+<li>A responder may reply to an initiator’s initial <code>SessionData</code> message with a <code>ReplyHandshakeError</code>.</li>
 </ul>
 <p>Because of their special status and processing rules, we define aliases for these messages:</p>
 <ul>
@@ -925,52 +991,53 @@ struct Pairs {
 <p>These aliases do not define new wire-level message types. That are purely used as a shorthand for the purpose of specification. Implementations will want to direct parsed <code>SessionData</code> messages to the correct handler if the nonce is zero or greater than zero. A <code>SessionData</code> message for a previously authenticated session shall always use a nonce greater than zero, whereas the session authentication messages shall always use a nonce equal to zero.</p>
 <p>Initiators and responders may optionally transfer user data in these messages. This mechanism effectively makes the handshake process a single round trip (1-RTT) request and response. Certain implementations may not wish to transfer user data until fully authenticated. Such implementations may send zero-payload session authentication messages and remain wire-level compatible.</p>
 <p>A previously valid session (keys, nonce values, start time, etc) shall not be invalidated until a session authentication message is received and authenticated using the new session keys. Implementations may wish to implement this behavior using two data structures, one for an <code>active session</code> and one for a <code>pending session</code>.</p>
-<div class="figure">
-<img src="img/msc/handshake.png" alt="Figure 3: Successful session establishment" id="fig:handshake" />
-<p class="caption"><span>Figure 3:</span> Successful session establishment</p>
+<div id="fig:handshake" class="fignos">
+<figure>
+<img src="msc/handshake.png" alt="Figure 1: Successful session establishment" /><figcaption><span>Figure 1:</span> Successful session establishment</figcaption>
+</figure>
 </div>
-<h3 id="timing-considerations"><span class="header-section-number">5.4.1</span> Timing Considerations</h3>
+<h3 id="timing-considerations"><span class="header-section-number">6.4.1</span> Timing Considerations</h3>
 <p>In the procedure that follows, the initiator and responder establish a common relative time base so that future session messages can be stamped with a time-to-live (TTL) value since the beginning of the session. This TTL value allows either side of the connection to detect delays induced by a man-in-the-middle. This TTL is has its limitations. An attacker with the ability to delay the handshake messages, can manipulate the common time base calculated by the initiator within the configured response timeout for initiator.</p>
 <p>All initiator implementations shall implement a response timeout to the handshake message(s). This timeout shall default to 2 seconds. If a timeout occurs before receiving a valid response, the current handshake attempt shall be aborted. This ensures that attackers cannot skew the common time base by more than this timeout parameter. Implementations should enforce a relatively low maximum value for this parameter to ensure that users do not accidentally deploy systems vulnerable to large session time manipulations</p>
-<h3 id="abstract-handshake-interfaces"><span class="header-section-number">5.4.2</span> Abstract Handshake Interfaces</h3>
+<h3 id="abstract-handshake-interfaces"><span class="header-section-number">6.4.2</span> Abstract Handshake Interfaces</h3>
 <p>Mode specific interfaces are defined in the next two sections. The term <em>interface</em> is used to describe an abstract implemenation consisting of both data and functions that operate on the data and inputs. They are described using a pseudo-code. Implementations are not required to use these abstractions when implementing the standard. They are provided as a mechanism to concisely specify the required behaviors and error handling in a manner that separates the generic handshake proceedure from the specifics of any particular mode.</p>
-<h4 id="initiator-handshake-interface-ihi"><span class="header-section-number">5.4.2.1</span> Initiator Handshake Interface (IHI)</h4>
+<h4 id="initiator-handshake-interface-ihi"><span class="header-section-number">6.4.2.1</span> Initiator Handshake Interface (IHI)</h4>
 <p>The IHI consists of two abstract methods:</p>
-<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">interface InitiatorHandshake
-{
-    <span class="co">/*</span>
-<span class="co">    * Returns the ephemeral_data and mode_data for the this handshake_mode</span>
-<span class="co">    *</span>
-<span class="co">    * Both of the return values are sequences of byte, possibly empty</span>
-<span class="co">    */</span>
-    abstract initialize() -&gt; (ephemeral_data, mode_data)
-
-    <span class="co">/*</span>
-<span class="co">    * Validate the reply and return the IKM or ABORT</span>
-<span class="co">    */</span>
-    abstract validate(reply: ReplyHandshakeBegin) -&gt; IKM <span class="kw">or</span> ABORT
-}</code></pre></div>
-<p>ABORT means &quot;abort the handshake&quot; and retry later if configured to do so.</p>
-<h4 id="responder-handshake-interface-rhi"><span class="header-section-number">5.4.2.2</span> Responder Handshake Interface (RHI)</h4>
+<div class="sourceCode" id="cb37"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb37-1" title="1">interface InitiatorHandshake</a>
+<a class="sourceLine" id="cb37-2" title="2">{</a>
+<a class="sourceLine" id="cb37-3" title="3">    <span class="co">/*</span></a>
+<a class="sourceLine" id="cb37-4" title="4"><span class="co">    * Returns the ephemeral_data and mode_data for the this handshake_mode</span></a>
+<a class="sourceLine" id="cb37-5" title="5"><span class="co">    *</span></a>
+<a class="sourceLine" id="cb37-6" title="6"><span class="co">    * Both of the return values are sequences of byte, possibly empty</span></a>
+<a class="sourceLine" id="cb37-7" title="7"><span class="co">    */</span></a>
+<a class="sourceLine" id="cb37-8" title="8">    abstract initialize() -&gt; (ephemeral_data, mode_data)</a>
+<a class="sourceLine" id="cb37-9" title="9"></a>
+<a class="sourceLine" id="cb37-10" title="10">    <span class="co">/*</span></a>
+<a class="sourceLine" id="cb37-11" title="11"><span class="co">    * Validate the reply and return the IKM or ABORT</span></a>
+<a class="sourceLine" id="cb37-12" title="12"><span class="co">    */</span></a>
+<a class="sourceLine" id="cb37-13" title="13">    abstract validate(reply: ReplyHandshakeBegin) -&gt; IKM <span class="kw">or</span> ABORT</a>
+<a class="sourceLine" id="cb37-14" title="14">}</a></code></pre></div>
+<p>ABORT means “abort the handshake” and retry later if configured to do so.</p>
+<h4 id="responder-handshake-interface-rhi"><span class="header-section-number">6.4.2.2</span> Responder Handshake Interface (RHI)</h4>
 <p>The RHI consists of a single method:</p>
-<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">interface ResponderHandshake
-{
-    <span class="co">/*</span>
-<span class="co">    * Partially validate the request and return the pair </span>
-<span class="co">    * (ReplyHandshakeBegin, IKM) or an error</span>
-<span class="co">    */</span>
-    abstract validate(request: RequestHandshakeBegin)
-        -&gt; (ReplyHandshakeBegin, IKM) <span class="kw">or</span> HandshakeError 
-}</code></pre></div>
+<div class="sourceCode" id="cb38"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb38-1" title="1">interface ResponderHandshake</a>
+<a class="sourceLine" id="cb38-2" title="2">{</a>
+<a class="sourceLine" id="cb38-3" title="3">    <span class="co">/*</span></a>
+<a class="sourceLine" id="cb38-4" title="4"><span class="co">    * Partially validate the request and return the pair </span></a>
+<a class="sourceLine" id="cb38-5" title="5"><span class="co">    * (ReplyHandshakeBegin, IKM) or an error</span></a>
+<a class="sourceLine" id="cb38-6" title="6"><span class="co">    */</span></a>
+<a class="sourceLine" id="cb38-7" title="7">    abstract validate(request: RequestHandshakeBegin)</a>
+<a class="sourceLine" id="cb38-8" title="8">        -&gt; (ReplyHandshakeBegin, IKM) <span class="kw">or</span> HandshakeError </a>
+<a class="sourceLine" id="cb38-9" title="9">}</a></code></pre></div>
 <p><code>HandshakeError</code> is the enumeration with the same name. Returning this enumeration means that the responder will abort the handshake proceedure and return the <code>ReplyHandshakeError</code> message reporting the <code>HandshakeError</code> that occured.</p>
 <p>The ResponderHandshake interface always validates the following parts of <code>RequestHandshakeBegin</code>:</p>
-<ol style="list-style-type: decimal">
+<ol type="1">
 <li>The <code>mode_data</code> bytes must conform to the <code>handshake_mode</code>.</li>
 <li>The <code>ephemeral_data</code> bytes must conform to the <code>handshake_mode</code>.</li>
 <li>The <code>spec.handshake_ephemeral</code> enumeration must agree with the <code>handshake_mode</code>.</li>
 </ol>
 <p>Other validation is left to the generic handshake proceedure in the following sections.</p>
-<h3 id="generic-handshake-procedure"><span class="header-section-number">5.4.3</span> Generic Handshake Procedure</h3>
+<h3 id="generic-handshake-procedure"><span class="header-section-number">6.4.3</span> Generic Handshake Procedure</h3>
 <p>The steps in this section are always performed during a successful handshake, regardless of which <code>HandshakeMode</code> is requested by the initiator. The generic procedure reference the mode-specific interfaces. It is important to understand that while the specifics of the mode sub-procedures vary, the following properties always hold for any given mode:</p>
 <ul>
 <li><p><code>ephemeral_data</code> is always generated dynamically or it is empty.</p></li>
@@ -990,8 +1057,8 @@ struct Pairs {
 <li><p><code>tx_sk</code> - transmit session key</p></li>
 <li><p><code>rx_sk</code> - receive session key</p></li>
 </ul>
-<h4 id="initiator-handshake-procedure"><span class="header-section-number">5.4.3.1</span> Initiator Handshake Procedure</h4>
-<ol style="list-style-type: decimal">
+<h4 id="initiator-handshake-procedure"><span class="header-section-number">6.4.3.1</span> Initiator Handshake Procedure</h4>
+<ol type="1">
 <li><p>The initiator prepares a <code>RequestHandshakeBegin</code> message to send to the responder.</p>
 <p><code>set request = IHI.initialize()</code></p></li>
 <li><p>The initiator sets <code>h</code> to the hash of the fully-initialized serialized request:</p>
@@ -1018,15 +1085,16 @@ struct Pairs {
 <li><p>Upon receiving a <code>SessionAuthReply</code> message before the timeout, the initiator uses the <code>pending session</code> to validate and authenticate the message. This procedure is identical to an active session, with the exception that the nonce is required to be zero.</p></li>
 <li><p>If the reply authenticates, the initiator replaces any <code>active session</code> with the <code>pending session</code>. Any previously active session is invalidated.</p></li>
 </ol>
-<h4 id="responder-handshake-procedure"><span class="header-section-number">5.4.3.2</span> Responder Handshake Procedure</h4>
+<h4 id="responder-handshake-procedure"><span class="header-section-number">6.4.3.2</span> Responder Handshake Procedure</h4>
 <p>The responder handshake is relatively stateless compared to the initiator. It does not require the use of a timer, and a single flag can be used to track whether the <code>pending session</code> is initialized or not.</p>
-<h5 id="processing-requesthandshakebegin"><span class="header-section-number">5.4.3.2.1</span> Processing RequestHandshakeBegin</h5>
+<h5 id="processing-requesthandshakebegin"><span class="header-section-number">6.4.3.2.1</span> Processing RequestHandshakeBegin</h5>
 <p>Upon receiving a <code>RequestHandshakeBegin</code> message:</p>
-<ol style="list-style-type: decimal">
+<ol type="1">
 <li><p>The responder records the time the request was received:</p>
 <p><code>set session_start_time = NOW()</code></p></li>
 <li><p>The responder sets <em>h</em> equal to the hash of the entire received request:</p>
 <p><code>set h = HASH(request)</code></p></li>
+<li><p>The responder examines the <code>Version</code> field of the received request and if the major version does not match the responder’s major version it replies with <code>HandshakeError</code> set to <code>UnsupportedVersion</code> and does no further processing.</p></li>
 <li><p>The responder uses the RHI to validate the request and prepare a response:</p>
 <p><code>set (IKM, ReplyHandshakeBegin) = RHI.validate(request)</code></p>
 <p>If an error is returned instead, the responder replies with ReplyHandshakeBegin(error) and performs no further actions.</p>
@@ -1038,27 +1106,28 @@ struct Pairs {
 <p>The initiator initializes the pending session with the session keys, requested algorithms, and <code>session_start_time</code>.</p>
 <p>The responder transmits the <code>ReplyHandshakeBegin</code> obtained from the RHI.</p></li>
 </ol>
-<h5 id="handling-session-auth-request"><span class="header-section-number">5.4.3.2.2</span> Handling Session Auth Request</h5>
-<ol style="list-style-type: decimal">
+<h5 id="handling-session-auth-request"><span class="header-section-number">6.4.3.2.2</span> Handling Session Auth Request</h5>
+<ol type="1">
 <li><p>The responder verifies that the <code>pending session</code> is initialized and valid.</p></li>
 <li><p>The responder uses the <code>pending session</code> to validate the message. The validation procedure is identical to an active session, with the exception that the nonce is required to be zero.</p></li>
 <li><p>The responder uses the <code>pending session</code> to transmit a <code>SessionAuthReply</code> message with nonce equal to zero. The responder may optionally transfer user data in this message. If no user data is available, then the user data shall be empty. All of the fields are calculated in the same manner as an active session, with the exception that the nonce is fixed to zero.</p></li>
 <li><p>The responder replaces any <code>active session</code> with the <code>pending session</code>. Any previously active session is invalidated.</p></li>
 </ol>
-<h3 id="security-properties"><span class="header-section-number">5.4.4</span> Security Properties</h3>
+<h3 id="security-properties"><span class="header-section-number">6.4.4</span> Security Properties</h3>
 <p>If any of the following properties do not hold, then initiator and responder will not agree on the same pair of session keys.</p>
 <ul>
 <li><p>If a MitM tampers with the contents of either the <code>RequestHandshakeBegin</code> message or the <code>ReplyHandshakeBegin</code>, the two parties will have different <code>h</code> values which will produce different keys when feed into the KDF.</p></li>
 <li><p>If either party is unable to calculate the <code>input_key_material</code>, they will be unable to calculate the same keys using the KDF.</p></li>
 <li><p>A MitM cannot tamper with the common <code>time_session_init</code> by delaying messages by more than whatever timeout setting the initiator uses while waiting for replies from the responder. This ensures that the common time-point, in two separate relative time bases, is at least accurate to within this margin when the session is first initialized.</p></li>
 </ul>
-<h3 id="message-exchanges"><span class="header-section-number">5.4.5</span> Message Exchanges</h3>
+<h3 id="message-exchanges"><span class="header-section-number">6.4.5</span> Message Exchanges</h3>
 <p>The responder may signal an error after receiving a <code>RequestHandshakeBegin</code>:</p>
-<div class="figure">
-<img src="img/msc/handshake_error.png" alt="Figure 4: Error in Request Handshake Begin" id="fig:handshake_error" />
-<p class="caption"><span>Figure 4:</span> Error in Request Handshake Begin</p>
+<div id="fig:handshake_error" class="fignos">
+<figure>
+<img src="msc/handshake_error.png" alt="Figure 2: Error in Request Handshake Begin" /><figcaption><span>Figure 2:</span> Error in Request Handshake Begin</figcaption>
+</figure>
 </div>
-<h3 id="handshake-modes"><span class="header-section-number">5.4.6</span> Handshake Modes</h3>
+<h3 id="handshake-modes"><span class="header-section-number">6.4.6</span> Handshake Modes</h3>
 <p>This section defines the various handshake modes that can be used to perform key derivation. The table below summarizes the modes, how they interpret fields in the handshake messages, and whether session modes that encrypt have forward secrecy (FS) if the long-term keys are later compromised.</p>
 <table>
 <thead>
@@ -1109,79 +1178,79 @@ struct Pairs {
 <li>The ephemeral data in public-key modes is an ephemeral DH public key. These modes always provide forward secrecy when paired with an encrypting session mode.</li>
 <li>Both public-key modes calculate the input key material in the same manner. In certificate mode, the remote public key is obtained by authenticating the certificate chain and extracting the public key from the peer certificate.</li>
 </ul>
-<h4 id="shared-secret-mode"><span class="header-section-number">5.4.6.1</span> Shared secret mode</h4>
+<h4 id="shared-secret-mode"><span class="header-section-number">6.4.6.1</span> Shared secret mode</h4>
 <p>In shared secret mode, each party possesses the same static 256-bit key.</p>
 <p>The <code>input_key_material</code> parameter to the KDF is a concatenation of the shared secret and nonces provided by both the initiator and the responder.</p>
-<h5 id="ihi-implementation"><span class="header-section-number">5.4.6.1.1</span> IHI Implementation</h5>
+<h5 id="ihi-implementation"><span class="header-section-number">6.4.6.1.1</span> IHI Implementation</h5>
 <p>The following pseudo-code implements the <code>InitiatorHanshake</code> interface for the shared-secret mode:</p>
-<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">class</span> SharedSecretInitiatorHandshake implements InitiatorHandshake
-{   
-    <span class="co">// class member variables</span>
-    set nonce = []
-    set shared_secret = &lt;initialized by constructor&gt;
-
-    initialize() -&gt; (ephemeral_data, mode_data) {   
-        set <span class="kw">this</span>.nonce = RANDOM(<span class="dv">256</span>) <span class="co">// save the nonce for later</span>
-        <span class="cf">return</span> (<span class="kw">this</span>.nonce, []) <span class="co">// the mode_data is empty</span>
-    }
-    
-    validate(reply: ReplyHandshakeBegin) -&gt; IKM <span class="kw">or</span> ABORT {
-        
-        <span class="co">/*</span>
-<span class="co">        * this is just a guard that prevents the method</span>
-<span class="co">        * from being before initialize() has been called</span>
-<span class="co">        */</span>
-        <span class="cf">if</span>(<span class="kw">this</span>.nonce.length == <span class="dv">0</span>) {
-            <span class="cf">return</span> ABORT(<span class="st">&quot;nonce not initialized&quot;</span>)
-        }
-                
-        <span class="cf">if</span>(reply.ephemeral_data.length != <span class="dv">32</span>) {
-            <span class="cf">return</span> ABORT(<span class="st">&quot;bad nonce length in reply&quot;</span>)
-        }
-
-        <span class="cf">if</span>(reply.mode_data.length != <span class="dv">0</span>) {
-            <span class="cf">return</span> ABORT(<span class="st">&quot;mode_data must be empty&quot;</span>)
-        }
-
-        <span class="cf">return</span> (<span class="kw">this</span>.shared_secret || <span class="kw">this</span>.nonce || reply.ephemeral_data)
-    }
-}</code></pre></div>
-<h5 id="rhi-implementation"><span class="header-section-number">5.4.6.1.2</span> RHI Implementation</h5>
+<div class="sourceCode" id="cb39"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb39-1" title="1"><span class="kw">class</span> SharedSecretInitiatorHandshake implements InitiatorHandshake</a>
+<a class="sourceLine" id="cb39-2" title="2">{   </a>
+<a class="sourceLine" id="cb39-3" title="3">    <span class="co">// class member variables</span></a>
+<a class="sourceLine" id="cb39-4" title="4">    set nonce = []</a>
+<a class="sourceLine" id="cb39-5" title="5">    set shared_secret = &lt;initialized by constructor&gt;</a>
+<a class="sourceLine" id="cb39-6" title="6"></a>
+<a class="sourceLine" id="cb39-7" title="7">    initialize() -&gt; (ephemeral_data, mode_data) {   </a>
+<a class="sourceLine" id="cb39-8" title="8">        set <span class="kw">this</span>.nonce = RANDOM(<span class="dv">256</span>) <span class="co">// save the nonce for later</span></a>
+<a class="sourceLine" id="cb39-9" title="9">        <span class="cf">return</span> (<span class="kw">this</span>.nonce, []) <span class="co">// the mode_data is empty</span></a>
+<a class="sourceLine" id="cb39-10" title="10">    }</a>
+<a class="sourceLine" id="cb39-11" title="11">    </a>
+<a class="sourceLine" id="cb39-12" title="12">    validate(reply: ReplyHandshakeBegin) -&gt; IKM <span class="kw">or</span> ABORT {</a>
+<a class="sourceLine" id="cb39-13" title="13">        </a>
+<a class="sourceLine" id="cb39-14" title="14">        <span class="co">/*</span></a>
+<a class="sourceLine" id="cb39-15" title="15"><span class="co">        * this is just a guard that prevents the method</span></a>
+<a class="sourceLine" id="cb39-16" title="16"><span class="co">        * from being before initialize() has been called</span></a>
+<a class="sourceLine" id="cb39-17" title="17"><span class="co">        */</span></a>
+<a class="sourceLine" id="cb39-18" title="18">        <span class="cf">if</span>(<span class="kw">this</span>.nonce.length == <span class="dv">0</span>) {</a>
+<a class="sourceLine" id="cb39-19" title="19">            <span class="cf">return</span> ABORT(<span class="st">&quot;nonce not initialized&quot;</span>)</a>
+<a class="sourceLine" id="cb39-20" title="20">        }</a>
+<a class="sourceLine" id="cb39-21" title="21">                </a>
+<a class="sourceLine" id="cb39-22" title="22">        <span class="cf">if</span>(reply.ephemeral_data.length != <span class="dv">32</span>) {</a>
+<a class="sourceLine" id="cb39-23" title="23">            <span class="cf">return</span> ABORT(<span class="st">&quot;bad nonce length in reply&quot;</span>)</a>
+<a class="sourceLine" id="cb39-24" title="24">        }</a>
+<a class="sourceLine" id="cb39-25" title="25"></a>
+<a class="sourceLine" id="cb39-26" title="26">        <span class="cf">if</span>(reply.mode_data.length != <span class="dv">0</span>) {</a>
+<a class="sourceLine" id="cb39-27" title="27">            <span class="cf">return</span> ABORT(<span class="st">&quot;mode_data must be empty&quot;</span>)</a>
+<a class="sourceLine" id="cb39-28" title="28">        }</a>
+<a class="sourceLine" id="cb39-29" title="29"></a>
+<a class="sourceLine" id="cb39-30" title="30">        <span class="cf">return</span> (<span class="kw">this</span>.shared_secret || <span class="kw">this</span>.nonce || reply.ephemeral_data)</a>
+<a class="sourceLine" id="cb39-31" title="31">    }</a>
+<a class="sourceLine" id="cb39-32" title="32">}</a></code></pre></div>
+<h5 id="rhi-implementation"><span class="header-section-number">6.4.6.1.2</span> RHI Implementation</h5>
 <p>The following pseudo-code implements the <code>ResponderHanshake</code> interface for the shared-secret mode:</p>
-<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">SharedSecretResponderHandshake implements ResponderHandshake
-{
-    <span class="co">// class member variables    </span>
-    set shared_secret = &lt;initialized by constructor&gt;
-    
-    abstract validate(request: RequestHandshakeBegin)
-        -&gt; (ReplyHandshakeBegin, IKM) <span class="kw">or</span> HandshakeError
-    {
-       <span class="cf">if</span>(request.crypto_spec.handshake_ephemeral != HandshakeEphemeral::NONCE) {
-           <span class="co">// doesn&#39;t match the handshake mode</span>
-           <span class="cf">return</span> HandshakeError::UNSUPPORTED_HANDSHAKE_EPHEMERAL;
-       }
-
-       <span class="cf">if</span>(request.ephemeral_data.length != <span class="dv">32</span>) {
-           <span class="cf">return</span> HandshakeError::BAD_MESSAGE_FORMAT;
-       }
-
-       <span class="cf">if</span>(request.mode_data.length != <span class="dv">0</span>) {
-           <span class="cf">return</span> HandshakeError::BAD_MESSAGE_FORMAT;
-       }
-
-       set nonce = RANDOM(<span class="dv">256</span>)
-
-       <span class="cf">return</span> (
-           ReplyHandshakeBegin(ephemeral_data = nonce, mode_data = []),
-           <span class="co">// the IKM</span>
-           <span class="kw">this</span>.shared_secret || request.ephemeral_data || nonce
-       );
-    }
-}</code></pre></div>
-<h4 id="quantum-key-distribution-qkd-mode"><span class="header-section-number">5.4.6.2</span> Quantum Key Distribution (QKD) mode</h4>
+<div class="sourceCode" id="cb40"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb40-1" title="1">SharedSecretResponderHandshake implements ResponderHandshake</a>
+<a class="sourceLine" id="cb40-2" title="2">{</a>
+<a class="sourceLine" id="cb40-3" title="3">    <span class="co">// class member variables    </span></a>
+<a class="sourceLine" id="cb40-4" title="4">    set shared_secret = &lt;initialized by constructor&gt;</a>
+<a class="sourceLine" id="cb40-5" title="5">    </a>
+<a class="sourceLine" id="cb40-6" title="6">    abstract validate(request: RequestHandshakeBegin)</a>
+<a class="sourceLine" id="cb40-7" title="7">        -&gt; (ReplyHandshakeBegin, IKM) <span class="kw">or</span> HandshakeError</a>
+<a class="sourceLine" id="cb40-8" title="8">    {</a>
+<a class="sourceLine" id="cb40-9" title="9">       <span class="cf">if</span>(request.crypto_spec.handshake_ephemeral != HandshakeEphemeral::NONCE) {</a>
+<a class="sourceLine" id="cb40-10" title="10">           <span class="co">// doesn&#39;t match the handshake mode</span></a>
+<a class="sourceLine" id="cb40-11" title="11">           <span class="cf">return</span> HandshakeError::UNSUPPORTED_HANDSHAKE_EPHEMERAL;</a>
+<a class="sourceLine" id="cb40-12" title="12">       }</a>
+<a class="sourceLine" id="cb40-13" title="13"></a>
+<a class="sourceLine" id="cb40-14" title="14">       <span class="cf">if</span>(request.ephemeral_data.length != <span class="dv">32</span>) {</a>
+<a class="sourceLine" id="cb40-15" title="15">           <span class="cf">return</span> HandshakeError::BAD_MESSAGE_FORMAT;</a>
+<a class="sourceLine" id="cb40-16" title="16">       }</a>
+<a class="sourceLine" id="cb40-17" title="17"></a>
+<a class="sourceLine" id="cb40-18" title="18">       <span class="cf">if</span>(request.mode_data.length != <span class="dv">0</span>) {</a>
+<a class="sourceLine" id="cb40-19" title="19">           <span class="cf">return</span> HandshakeError::BAD_MESSAGE_FORMAT;</a>
+<a class="sourceLine" id="cb40-20" title="20">       }</a>
+<a class="sourceLine" id="cb40-21" title="21"></a>
+<a class="sourceLine" id="cb40-22" title="22">       set nonce = RANDOM(<span class="dv">256</span>)</a>
+<a class="sourceLine" id="cb40-23" title="23"></a>
+<a class="sourceLine" id="cb40-24" title="24">       <span class="cf">return</span> (</a>
+<a class="sourceLine" id="cb40-25" title="25">           ReplyHandshakeBegin(ephemeral_data = nonce, mode_data = []),</a>
+<a class="sourceLine" id="cb40-26" title="26">           <span class="co">// the IKM</span></a>
+<a class="sourceLine" id="cb40-27" title="27">           <span class="kw">this</span>.shared_secret || request.ephemeral_data || nonce</a>
+<a class="sourceLine" id="cb40-28" title="28">       );</a>
+<a class="sourceLine" id="cb40-29" title="29">    }</a>
+<a class="sourceLine" id="cb40-30" title="30">}</a></code></pre></div>
+<h4 id="quantum-key-distribution-qkd-mode"><span class="header-section-number">6.4.6.2</span> Quantum Key Distribution (QKD) mode</h4>
 <p>In QKD mode, both parties continuously receive a stream of 256-bit keys. A single one of these keys is used to establish an SSP21 session. The initiator signals which key to use using the <code>mode_data</code> parameter in <code>RequestHandshakeBegin</code> as a key identifier. This key identifer is implementation specific, but must be capable of unambiguously identifying a key without revealing any information about the key. Possible valid key identifiers include:</p>
-<ol style="list-style-type: decimal">
-<li>A fingerprint of the key, e.g. a secure hash of the key itself.</li>
+<ol type="1">
+<li>A fingerprint of the key, e.g. a secure hash of the key itself.</li>
 <li>A sufficiently large increasing counter, with care given to the behavior if the counter ever rolls over due to restart.</li>
 </ol>
 <p>The handshake interface definitions that follow make use of two abstract functions to obtain and find keys from some abstract store of keys delivered via QKD:</p>
@@ -1197,69 +1266,69 @@ get_next_key() -&gt; (key, identifier)
 find_key(identifier: Seq[Byte]) -&gt; Option[key]
 
 </code></pre>
-<p><strong>Important: </strong> Both of these functions <strong>consume</strong> the key from the key store, i.e. the key in question will never be available again after a call to either <code>get_next_key</code> or <code>find_key</code>.</p>
-<h5 id="ihi-implementation-1"><span class="header-section-number">5.4.6.2.1</span> IHI Implementation</h5>
+<p><strong>Important: </strong> Both of these functions <strong>consume</strong> the key from the key store, i.e. the key in question will never be available again after a call to either <code>get_next_key</code> or <code>find_key</code>.</p>
+<h5 id="ihi-implementation-1"><span class="header-section-number">6.4.6.2.1</span> IHI Implementation</h5>
 <p>The following pseudo-code implements the <code>InitiatorHanshake</code> interface for the QKD mode:</p>
-<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">class</span> QKDInitiatorHandshake implements InitiatorHandshake
-{          
-    <span class="co">// the key is empty until the first call to initialize</span>
-    set key = []
-
-    initialize() -&gt; (ephemeral_data, mode_data) {
-        set (<span class="kw">this</span>.key, identifier) = get_next_key()     
-        <span class="cf">return</span> ([], identifier) <span class="co">// the ephemeral_data is empty</span>
-    }
-    
-    validate(reply: ReplyHandshakeBegin) -&gt; IKM <span class="kw">or</span> ABORT {
-        
-        <span class="co">/*</span>
-<span class="co">        * this is just a guard that prevents the method</span>
-<span class="co">        * from being called before initialize() has been called</span>
-<span class="co">        */</span>
-        <span class="cf">if</span>(<span class="kw">this</span>.key.length == <span class="dv">0</span>) {
-            <span class="cf">return</span> ABORT(<span class="st">&quot;key not initialized&quot;</span>)
-        }
-                
-        <span class="cf">if</span>(reply.ephemeral_data.length == <span class="dv">0</span>) {
-            <span class="cf">return</span> ABORT(<span class="st">&quot;ephemeral data is not empty&quot;</span>)
-        }
-
-        <span class="cf">if</span>(reply.mode_data.length == <span class="dv">0</span>) {
-            <span class="cf">return</span> ABORT(<span class="st">&quot;mode_data is not empty&quot;</span>)
-        }       
-
-        <span class="co">// the IKM is just the one-time key</span>
-        <span class="cf">return</span> <span class="kw">this</span>.key
-    }
-}</code></pre></div>
-<h5 id="rhi-implementation-1"><span class="header-section-number">5.4.6.2.2</span> RHI Implementation</h5>
+<div class="sourceCode" id="cb42"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb42-1" title="1"><span class="kw">class</span> QKDInitiatorHandshake implements InitiatorHandshake</a>
+<a class="sourceLine" id="cb42-2" title="2">{          </a>
+<a class="sourceLine" id="cb42-3" title="3">    <span class="co">// the key is empty until the first call to initialize</span></a>
+<a class="sourceLine" id="cb42-4" title="4">    set key = []</a>
+<a class="sourceLine" id="cb42-5" title="5"></a>
+<a class="sourceLine" id="cb42-6" title="6">    initialize() -&gt; (ephemeral_data, mode_data) {</a>
+<a class="sourceLine" id="cb42-7" title="7">        set (<span class="kw">this</span>.key, identifier) = get_next_key()     </a>
+<a class="sourceLine" id="cb42-8" title="8">        <span class="cf">return</span> ([], identifier) <span class="co">// the ephemeral_data is empty</span></a>
+<a class="sourceLine" id="cb42-9" title="9">    }</a>
+<a class="sourceLine" id="cb42-10" title="10">    </a>
+<a class="sourceLine" id="cb42-11" title="11">    validate(reply: ReplyHandshakeBegin) -&gt; IKM <span class="kw">or</span> ABORT {</a>
+<a class="sourceLine" id="cb42-12" title="12">        </a>
+<a class="sourceLine" id="cb42-13" title="13">        <span class="co">/*</span></a>
+<a class="sourceLine" id="cb42-14" title="14"><span class="co">        * this is just a guard that prevents the method</span></a>
+<a class="sourceLine" id="cb42-15" title="15"><span class="co">        * from being called before initialize() has been called</span></a>
+<a class="sourceLine" id="cb42-16" title="16"><span class="co">        */</span></a>
+<a class="sourceLine" id="cb42-17" title="17">        <span class="cf">if</span>(<span class="kw">this</span>.key.length == <span class="dv">0</span>) {</a>
+<a class="sourceLine" id="cb42-18" title="18">            <span class="cf">return</span> ABORT(<span class="st">&quot;key not initialized&quot;</span>)</a>
+<a class="sourceLine" id="cb42-19" title="19">        }</a>
+<a class="sourceLine" id="cb42-20" title="20">                </a>
+<a class="sourceLine" id="cb42-21" title="21">        <span class="cf">if</span>(reply.ephemeral_data.length == <span class="dv">0</span>) {</a>
+<a class="sourceLine" id="cb42-22" title="22">            <span class="cf">return</span> ABORT(<span class="st">&quot;ephemeral data is not empty&quot;</span>)</a>
+<a class="sourceLine" id="cb42-23" title="23">        }</a>
+<a class="sourceLine" id="cb42-24" title="24"></a>
+<a class="sourceLine" id="cb42-25" title="25">        <span class="cf">if</span>(reply.mode_data.length == <span class="dv">0</span>) {</a>
+<a class="sourceLine" id="cb42-26" title="26">            <span class="cf">return</span> ABORT(<span class="st">&quot;mode_data is not empty&quot;</span>)</a>
+<a class="sourceLine" id="cb42-27" title="27">        }       </a>
+<a class="sourceLine" id="cb42-28" title="28"></a>
+<a class="sourceLine" id="cb42-29" title="29">        <span class="co">// the IKM is just the one-time key</span></a>
+<a class="sourceLine" id="cb42-30" title="30">        <span class="cf">return</span> <span class="kw">this</span>.key</a>
+<a class="sourceLine" id="cb42-31" title="31">    }</a>
+<a class="sourceLine" id="cb42-32" title="32">}</a></code></pre></div>
+<h5 id="rhi-implementation-1"><span class="header-section-number">6.4.6.2.2</span> RHI Implementation</h5>
 <p>The following pseudo-code implements the <code>ResponderHanshake</code> interface for the QKD mode:</p>
-<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">QKDResponderHandshake implements ResponderHandshake
-{    
-    abstract validate(request: RequestHandshakeBegin)
-        -&gt; (ReplyHandshakeBegin, IKM) <span class="kw">or</span> HandshakeError
-    {
-       <span class="cf">if</span>(request.crypto_spec.handshake_ephemeral != HandshakeEphemeral::NONE) {
-           <span class="co">// must be NONE in QKD mode</span>
-           <span class="cf">return</span> HandshakeError::UNSUPPORTED_HANDSHAKE_EPHEMERAL;
-       }
-
-       <span class="co">// use the mode data to lookup the key</span>
-       set optional_key = find_key(request.mode_data)
-
-       <span class="cf">if</span>(!optional_key.exists) {
-           <span class="cf">return</span> HandshakeError::KEY_NOT_FOUND;
-       }
-
-       <span class="cf">return</span> (
-           ReplyHandshakeBegin(ephemeral_data = [], mode_data = []), <span class="co">// empty reply</span>
-           <span class="co">// the IKM</span>
-           optional_key.get_value
-       );
-    }
-}</code></pre></div>
-<h4 id="pre-shared-public-key-mode"><span class="header-section-number">5.4.6.3</span> Pre-shared public key mode</h4>
-<p>In pre-shared public key mode, each party has out-of-band prior knowledge of the other party's static public DH key. The <code>ephemeral_data</code> field in this mode is an ephemeral public DH key. The <code>mode_data</code> field is always empty.</p>
+<div class="sourceCode" id="cb43"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb43-1" title="1">QKDResponderHandshake implements ResponderHandshake</a>
+<a class="sourceLine" id="cb43-2" title="2">{    </a>
+<a class="sourceLine" id="cb43-3" title="3">    abstract validate(request: RequestHandshakeBegin)</a>
+<a class="sourceLine" id="cb43-4" title="4">        -&gt; (ReplyHandshakeBegin, IKM) <span class="kw">or</span> HandshakeError</a>
+<a class="sourceLine" id="cb43-5" title="5">    {</a>
+<a class="sourceLine" id="cb43-6" title="6">       <span class="cf">if</span>(request.crypto_spec.handshake_ephemeral != HandshakeEphemeral::NONE) {</a>
+<a class="sourceLine" id="cb43-7" title="7">           <span class="co">// must be NONE in QKD mode</span></a>
+<a class="sourceLine" id="cb43-8" title="8">           <span class="cf">return</span> HandshakeError::UNSUPPORTED_HANDSHAKE_EPHEMERAL;</a>
+<a class="sourceLine" id="cb43-9" title="9">       }</a>
+<a class="sourceLine" id="cb43-10" title="10"></a>
+<a class="sourceLine" id="cb43-11" title="11">       <span class="co">// use the mode data to lookup the key</span></a>
+<a class="sourceLine" id="cb43-12" title="12">       set optional_key = find_key(request.mode_data)</a>
+<a class="sourceLine" id="cb43-13" title="13"></a>
+<a class="sourceLine" id="cb43-14" title="14">       <span class="cf">if</span>(!optional_key.exists) {</a>
+<a class="sourceLine" id="cb43-15" title="15">           <span class="cf">return</span> HandshakeError::KEY_NOT_FOUND;</a>
+<a class="sourceLine" id="cb43-16" title="16">       }</a>
+<a class="sourceLine" id="cb43-17" title="17"></a>
+<a class="sourceLine" id="cb43-18" title="18">       <span class="cf">return</span> (</a>
+<a class="sourceLine" id="cb43-19" title="19">           ReplyHandshakeBegin(ephemeral_data = [], mode_data = []), <span class="co">// empty reply</span></a>
+<a class="sourceLine" id="cb43-20" title="20">           <span class="co">// the IKM</span></a>
+<a class="sourceLine" id="cb43-21" title="21">           optional_key.get_value</a>
+<a class="sourceLine" id="cb43-22" title="22">       );</a>
+<a class="sourceLine" id="cb43-23" title="23">    }</a>
+<a class="sourceLine" id="cb43-24" title="24">}</a></code></pre></div>
+<h4 id="pre-shared-public-key-mode"><span class="header-section-number">6.4.6.3</span> Pre-shared public key mode</h4>
+<p>In pre-shared public key mode, each party has out-of-band prior knowledge of the other party’s static public DH key. The <code>ephemeral_data</code> field in this mode is an ephemeral public DH key. The <code>mode_data</code> field is always empty.</p>
 <p>DH keys in this section use the following abbreviations:</p>
 <ul>
 <li><strong><code>ls_pk</code></strong> - local static public key</li>
@@ -1269,74 +1338,74 @@ find_key(identifier: Seq[Byte]) -&gt; Option[key]
 <li><strong><code>rs_pk</code></strong> - remote static public key</li>
 <li><strong><code>re_pk</code></strong> - remote ephemeral public key</li>
 </ul>
-<h5 id="ihi-implementation-2"><span class="header-section-number">5.4.6.3.1</span> IHI Implementation</h5>
+<h5 id="ihi-implementation-2"><span class="header-section-number">6.4.6.3.1</span> IHI Implementation</h5>
 <p>The following pseudo-code implements the <code>InitiatorHanshake</code> interface for the pre-shared public key mode:</p>
-<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">class</span> PresharedPublicKeyInitiatorHandshake implements InitiatorHandshake
-{              
-    set ls_pk = &lt;initialized by constructor&gt;
-    set ls_vk = &lt;initialized by constructor&gt;
-    set rs_pk = &lt;initialized by constructor&gt;
-
-    <span class="co">// local ephemeral private key initialized for every handshake  </span>
-    set le_vk = []
-    
-    initialize() -&gt; (ephemeral_data, mode_data) {
-        <span class="co">// see section on DH algorithms</span>
-        set (le_pk, <span class="kw">this</span>.le_vk) = generate_key_pair()       
-        <span class="cf">return</span> (le_pk, []) <span class="co">// mode is empty</span>
-    }
-    
-    validate(reply: ReplyHandshakeBegin) -&gt; IKM <span class="kw">or</span> ABORT {
-        
-        <span class="cf">if</span>(reply.ephemeral_data.length != LEN_DH) {
-            <span class="cf">return</span> Abort(<span class="st">&quot;ephemeral_data length doesn&#39;t match DH algorithm&quot;</span>)
-        }
-
-        <span class="cf">if</span>(reply.mode_data.length != <span class="dv">0</span>) {
-            <span class="cf">return</span> Abort(<span class="st">&quot;mode_data is not empty&quot;</span>)
-        }
-
-        set dh1 = DH(le_vk, re_pk)
-        set dh2 = DH(ls_vk, re_pk)
-        set dh3 = DH(le_vk, rs_pk)
-
-        <span class="cf">return</span> (dh1 || dh2 || dh3)
-    }
-}</code></pre></div>
-<h5 id="rhi-implementation-2"><span class="header-section-number">5.4.6.3.2</span> RHI Implementation</h5>
+<div class="sourceCode" id="cb44"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb44-1" title="1"><span class="kw">class</span> PresharedPublicKeyInitiatorHandshake implements InitiatorHandshake</a>
+<a class="sourceLine" id="cb44-2" title="2">{              </a>
+<a class="sourceLine" id="cb44-3" title="3">    set ls_pk = &lt;initialized by constructor&gt;</a>
+<a class="sourceLine" id="cb44-4" title="4">    set ls_vk = &lt;initialized by constructor&gt;</a>
+<a class="sourceLine" id="cb44-5" title="5">    set rs_pk = &lt;initialized by constructor&gt;</a>
+<a class="sourceLine" id="cb44-6" title="6"></a>
+<a class="sourceLine" id="cb44-7" title="7">    <span class="co">// local ephemeral private key initialized for every handshake  </span></a>
+<a class="sourceLine" id="cb44-8" title="8">    set le_vk = []</a>
+<a class="sourceLine" id="cb44-9" title="9">    </a>
+<a class="sourceLine" id="cb44-10" title="10">    initialize() -&gt; (ephemeral_data, mode_data) {</a>
+<a class="sourceLine" id="cb44-11" title="11">        <span class="co">// see section on DH algorithms</span></a>
+<a class="sourceLine" id="cb44-12" title="12">        set (le_pk, <span class="kw">this</span>.le_vk) = generate_key_pair()       </a>
+<a class="sourceLine" id="cb44-13" title="13">        <span class="cf">return</span> (le_pk, []) <span class="co">// mode is empty</span></a>
+<a class="sourceLine" id="cb44-14" title="14">    }</a>
+<a class="sourceLine" id="cb44-15" title="15">    </a>
+<a class="sourceLine" id="cb44-16" title="16">    validate(reply: ReplyHandshakeBegin) -&gt; IKM <span class="kw">or</span> ABORT {</a>
+<a class="sourceLine" id="cb44-17" title="17">        </a>
+<a class="sourceLine" id="cb44-18" title="18">        <span class="cf">if</span>(reply.ephemeral_data.length != LEN_DH) {</a>
+<a class="sourceLine" id="cb44-19" title="19">            <span class="cf">return</span> Abort(<span class="st">&quot;ephemeral_data length doesn&#39;t match DH algorithm&quot;</span>)</a>
+<a class="sourceLine" id="cb44-20" title="20">        }</a>
+<a class="sourceLine" id="cb44-21" title="21"></a>
+<a class="sourceLine" id="cb44-22" title="22">        <span class="cf">if</span>(reply.mode_data.length != <span class="dv">0</span>) {</a>
+<a class="sourceLine" id="cb44-23" title="23">            <span class="cf">return</span> Abort(<span class="st">&quot;mode_data is not empty&quot;</span>)</a>
+<a class="sourceLine" id="cb44-24" title="24">        }</a>
+<a class="sourceLine" id="cb44-25" title="25"></a>
+<a class="sourceLine" id="cb44-26" title="26">        set dh1 = DH(le_vk, re_pk)</a>
+<a class="sourceLine" id="cb44-27" title="27">        set dh2 = DH(ls_vk, re_pk)</a>
+<a class="sourceLine" id="cb44-28" title="28">        set dh3 = DH(le_vk, rs_pk)</a>
+<a class="sourceLine" id="cb44-29" title="29"></a>
+<a class="sourceLine" id="cb44-30" title="30">        <span class="cf">return</span> (dh1 || dh2 || dh3)</a>
+<a class="sourceLine" id="cb44-31" title="31">    }</a>
+<a class="sourceLine" id="cb44-32" title="32">}</a></code></pre></div>
+<h5 id="rhi-implementation-2"><span class="header-section-number">6.4.6.3.2</span> RHI Implementation</h5>
 <p>The following pseudo-code implements the <code>ResponderHanshake</code> interface for the QKD mode:</p>
-<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">QKDResponderHandshake implements ResponderHandshake
-{    
-    abstract validate(request: RequestHandshakeBegin)
-        -&gt; (ReplyHandshakeBegin, IKM) <span class="kw">or</span> HandshakeError
-    {
-       <span class="co">// validate that the initiator is requesting the same DH algorithm</span>
-       <span class="cf">if</span>(request.spec.handshake_ephemeral != DH_TYPE) {
-           
-           <span class="cf">return</span> HandshakeError::unsupported_handshake_ephemeral;
-       }
-
-       <span class="co">// mode data must be empty</span>
-       <span class="cf">if</span>(request.mode_data.length != <span class="dv">0</span>) {         
-           <span class="cf">return</span> HandshakeError::bad_message_format;
-       }
-       
-       <span class="co">// validate that the length of the field is as expected</span>
-       <span class="cf">if</span>(request.ephemeral_data.length != LEN_DH) {      
-            <span class="cf">return</span> HandshakeError::bad_message_format;
-       }
-
-       set dh1 = DH(le_vk, re_pk)
-       set dh2 = DH(le_vk, rs_pk)
-       set dh3 = DH(ls_vk, re_pk)
-
-       <span class="cf">return</span> (dh1 || dh2 || dh3)
-    }
-}</code></pre></div>
+<div class="sourceCode" id="cb45"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb45-1" title="1">QKDResponderHandshake implements ResponderHandshake</a>
+<a class="sourceLine" id="cb45-2" title="2">{    </a>
+<a class="sourceLine" id="cb45-3" title="3">    abstract validate(request: RequestHandshakeBegin)</a>
+<a class="sourceLine" id="cb45-4" title="4">        -&gt; (ReplyHandshakeBegin, IKM) <span class="kw">or</span> HandshakeError</a>
+<a class="sourceLine" id="cb45-5" title="5">    {</a>
+<a class="sourceLine" id="cb45-6" title="6">       <span class="co">// validate that the initiator is requesting the same DH algorithm</span></a>
+<a class="sourceLine" id="cb45-7" title="7">       <span class="cf">if</span>(request.spec.handshake_ephemeral != DH_TYPE) {</a>
+<a class="sourceLine" id="cb45-8" title="8">           </a>
+<a class="sourceLine" id="cb45-9" title="9">           <span class="cf">return</span> HandshakeError::unsupported_handshake_ephemeral;</a>
+<a class="sourceLine" id="cb45-10" title="10">       }</a>
+<a class="sourceLine" id="cb45-11" title="11"></a>
+<a class="sourceLine" id="cb45-12" title="12">       <span class="co">// mode data must be empty</span></a>
+<a class="sourceLine" id="cb45-13" title="13">       <span class="cf">if</span>(request.mode_data.length != <span class="dv">0</span>) {         </a>
+<a class="sourceLine" id="cb45-14" title="14">           <span class="cf">return</span> HandshakeError::bad_message_format;</a>
+<a class="sourceLine" id="cb45-15" title="15">       }</a>
+<a class="sourceLine" id="cb45-16" title="16">       </a>
+<a class="sourceLine" id="cb45-17" title="17">       <span class="co">// validate that the length of the field is as expected</span></a>
+<a class="sourceLine" id="cb45-18" title="18">       <span class="cf">if</span>(request.ephemeral_data.length != LEN_DH) {      </a>
+<a class="sourceLine" id="cb45-19" title="19">            <span class="cf">return</span> HandshakeError::bad_message_format;</a>
+<a class="sourceLine" id="cb45-20" title="20">       }</a>
+<a class="sourceLine" id="cb45-21" title="21"></a>
+<a class="sourceLine" id="cb45-22" title="22">       set dh1 = DH(le_vk, re_pk)</a>
+<a class="sourceLine" id="cb45-23" title="23">       set dh2 = DH(le_vk, rs_pk)</a>
+<a class="sourceLine" id="cb45-24" title="24">       set dh3 = DH(ls_vk, re_pk)</a>
+<a class="sourceLine" id="cb45-25" title="25"></a>
+<a class="sourceLine" id="cb45-26" title="26">       <span class="cf">return</span> (dh1 || dh2 || dh3)</a>
+<a class="sourceLine" id="cb45-27" title="27">    }</a>
+<a class="sourceLine" id="cb45-28" title="28">}</a></code></pre></div>
 <p><strong>Important:</strong> This procedure omits validation for every possible type of DH keys. Implementations must validate DH keys are valid for any specific DH algorithm.</p>
 <p><strong>Note:</strong> The <code>dh2</code> and <code>dh3</code> calculations are reversed for the initiator and responder, but result in the same values.</p>
-<h5 id="input-key-material-ikm-procedure-responder"><span class="header-section-number">5.4.6.3.3</span> Input Key Material (IKM) Procedure (Responder)</h5>
-<ol style="list-style-type: decimal">
+<h5 id="input-key-material-ikm-procedure-responder"><span class="header-section-number">6.4.6.3.3</span> Input Key Material (IKM) Procedure (Responder)</h5>
+<ol type="1">
 <li><p>Verify that the <em>handshake ephemeral</em> is a DH key type.</p></li>
 <li><p>Verify that the length of the <code>ephemeral_data</code> field matches the length of the requested DH type.</p></li>
 <li><p>Verify that the <em>mode data</em> field is empty.</p></li>
@@ -1349,24 +1418,24 @@ find_key(identifier: Seq[Byte]) -&gt; Option[key]
 </ul></li>
 </ol>
 <p><strong>Note:</strong> The dh2 and dh3 calculations are reversed for the initiator and responder.</p>
-<h4 id="industrial-certificate-mode"><span class="header-section-number">5.4.6.4</span> Industrial Certificate Mode</h4>
-<p>Certificate mode is similar to the pre-shared public key mode. Instead of having prior knowledge of the remote party's public static DH key, it is embedded in a certificate that is authenticated using the public key of a trusted authority. The calculations of the IKM are identical between the two modes. Instead of being empty, the <code>mode_data</code> field contains a certificate chain.</p>
+<h4 id="industrial-certificate-mode"><span class="header-section-number">6.4.6.4</span> Industrial Certificate Mode</h4>
+<p>Certificate mode is similar to the pre-shared public key mode. Instead of having prior knowledge of the remote party’s public static DH key, it is embedded in a certificate that is authenticated using the public key of a trusted authority. The calculations of the IKM are identical between the two modes. Instead of being empty, the <code>mode_data</code> field contains a certificate chain.</p>
 <p><strong>TODO:</strong> Decide whether to mostly duplicate the prodcedure or find a way define common points with pre-shared public key mode.</p>
-<h2 id="sessions"><span class="header-section-number">5.5</span> Sessions</h2>
-<h3 id="initialization"><span class="header-section-number">5.5.1</span> Initialization</h3>
+<h2 id="sessions"><span class="header-section-number">6.5</span> Sessions</h2>
+<h3 id="initialization"><span class="header-section-number">6.5.1</span> Initialization</h3>
 <p>Upon completion of a successfully authenticated handshake, the communication session is initialized (or possibly reinitialized) with the following arguments:</p>
 <ul>
 <li><p><code>rx_sk</code> - A session key used to authenticate/decrypt received messages.</p></li>
 <li><p><code>tx_sk</code> - A session key used to sign/encrypt transmitted messages.</p></li>
 <li><p><code>time_session_init</code> - The time the session was considered initialized in the local relative time base.</p></li>
-<li><p><code>read</code> - A function corresponding to the specified <code>SessionCryptoMode</code> used to process a received message's payload:</p></li>
+<li><p><code>read</code> - A function corresponding to the specified <code>SessionCryptoMode</code> used to process a received message’s payload:</p></li>
 </ul>
 <pre><code>
 read(key: Key, message: SessionData) -&gt; (cleartext) or Error
 
 </code></pre>
 <ul>
-<li><code>write</code> - A function corresponding to the specified <code>SessionCryptoMode</code> used to prepare a transmitted message's payload:</li>
+<li><code>write</code> - A function corresponding to the specified <code>SessionCryptoMode</code> used to prepare a transmitted message’s payload:</li>
 </ul>
 <pre><code>
 write(key: Key, ad: Seq[Byte], plaintext: Seq[Byte])
@@ -1385,7 +1454,7 @@ verify_nonce(last_nonce: U16, new_nonce: U16) -&gt; bool
 <li><p>A 2-byte incrementing nonce (<code>n</code>) always initialized to zero, one for each session key.</p></li>
 <li><p>A configurable session termination timeout after which the session will no longer be considered valid.</p></li>
 </ul>
-<h3 id="invalidation"><span class="header-section-number">5.5.2</span> Invalidation</h3>
+<h3 id="invalidation"><span class="header-section-number">6.5.2</span> Invalidation</h3>
 <p>Sessions will only become invalidated after one of the following conditions occurs:</p>
 <ul>
 <li><p>The transmit or receive nonce reaches the maximum value of 2^16 - 1.</p></li>
@@ -1394,7 +1463,7 @@ verify_nonce(last_nonce: U16, new_nonce: U16) -&gt; bool
 <li><p>When using session-oriented transports such as TCP, closing the underlying communication layer will invalidate the SSP21 cryptographic session.</p></li>
 </ul>
 <p>Under no condition will malformed packets, unexpected messages, authentication failures, partial handshakes, or any other condition other than the ones listed above invalidate an existing session.</p>
-<h3 id="sending-sessiondata"><span class="header-section-number">5.5.3</span> Sending <code>SessionData</code></h3>
+<h3 id="sending-sessiondata"><span class="header-section-number">6.5.3</span> Sending <code>SessionData</code></h3>
 <p>The following procedure is followed to transmit a <code>SessionData</code> message:</p>
 <ul>
 <li><p>Ensure that the transmit nonce is not equal to the maximum value.</p></li>
@@ -1404,7 +1473,7 @@ verify_nonce(last_nonce: U16, new_nonce: U16) -&gt; bool
 </ul>
 <p><strong>Note:</strong> The first transmitted session message from each party always has <code>n</code> = 1.</p>
 <p><strong>Note:</strong> See the TTL session for advice on how to set appropriate TTLs.</p>
-<h3 id="validating-sessiondata"><span class="header-section-number">5.5.4</span> Validating <code>SessionData</code></h3>
+<h3 id="validating-sessiondata"><span class="header-section-number">6.5.4</span> Validating <code>SessionData</code></h3>
 <p>The following procedure is followed to validate a received <code>SessionData</code> message:</p>
 <ul>
 <li><p>Verify the authenticity of the message using the <code>read</code> function with which the session was initialized. Upon successful authentication, the cleartext payload is returned.</p></li>
@@ -1412,12 +1481,12 @@ verify_nonce(last_nonce: U16, new_nonce: U16) -&gt; bool
 <li><p>Check the nonce using the <code>verify_nonce</code> function with which the session was initialized.</p></li>
 <li><p>Set the current nonce equal to the value of the received nonce.</p></li>
 </ul>
-<h3 id="time-to-live"><span class="header-section-number">5.5.5</span> Time-to-live</h3>
+<h3 id="time-to-live"><span class="header-section-number">6.5.5</span> Time-to-live</h3>
 <p>Each session message contains a time-to-live (TTL) parameter called <code>valid_until_ms</code>. This parameter is a count of milliseconds since session initialization (as defined in the handshake section), after which, the receiving party shall not accept an authenticated packet. This TTL prevents attackers from holding back a number of valid session messages and then replaying them in rapid succession.</p>
 <p>While this feature provides an additional security guarantee absent in most IT security protocols, it must be configured appropriately.</p>
-<h4 id="clock-drift"><span class="header-section-number">5.5.5.1</span> Clock drift</h4>
+<h4 id="clock-drift"><span class="header-section-number">6.5.5.1</span> Clock drift</h4>
 <p>SSP21 Implementations are required to have an accurate relative clock with at least millisecond precision. This standard does not require a particular minimum drift rate from real-time, however, hardware solutions deploying SSP21 should publish information about the maximum possible clock drift.</p>
-<h4 id="setting-the-ttl"><span class="header-section-number">5.5.5.2</span> Setting the TTL</h4>
+<h4 id="setting-the-ttl"><span class="header-section-number">6.5.5.2</span> Setting the TTL</h4>
 <p>A strategy for setting the TTL in each transmitted message must take into account the following factors:</p>
 <ul>
 <li><p><code>session key change interval</code> (<strong><code>I</code></strong>) - The longer the interval between session key changes, the more the relative clocks can drift apart.</p></li>
@@ -1434,17 +1503,17 @@ set TTL = current_session_time + max_drift + T + L</code></pre>
 set max_drift = current_session_time * R
 set TTL = current_session_time + max_drift + T + L</code></pre>
 <p>Regardless of the scheme chosen, implementations shall document whatever method they use for determining the TTL on transmitted packets.</p>
-<h4 id="disabling-support"><span class="header-section-number">5.5.5.3</span> Disabling Support</h4>
+<h4 id="disabling-support"><span class="header-section-number">6.5.5.3</span> Disabling Support</h4>
 <p>In applications that do not require a TTL, or where no accurate clock is available, implementations may optionally disable support for the TTL.</p>
 <ul>
 <li>In the receive direction, implementations may be configurable to ignore the received TTL entirely.</li>
 <li>In the transmit direction, implementations may be configurable to set the TTL to the maximum value of 2^32 - 1.</li>
 </ul>
-<h3 id="session-crypto-modes"><span class="header-section-number">5.5.6</span> Session Crypto Modes</h3>
+<h3 id="session-crypto-modes"><span class="header-section-number">6.5.6</span> Session Crypto Modes</h3>
 <p>The <code>SessionCryptoMode</code> specified by the initiator determines the concrete <code>read</code> and <code>write</code> functions with which the session is initialized. These functions fall into two general categories: MAC-based functions that only provide authentication, and Authenticated Encryption with Associated Data (AEAD) algorithms that encrypt the payload and additionally authenticate both the payload and associated data in the message.</p>
-<p>AEAD implementations such as AES-GCM or ChaCha20-Poly1305 already provide functions that largely match the <code>read</code> and <code>write</code> methods described here. The only difference being that they also take the nonce as a paramter.</p>
+<p>AEAD implementations such as AES-GCM or ChaCha20-Poly1305 already provide functions that largely match the <code>read</code> and <code>write</code> methods described here. The only difference being that they also take the nonce as a parameter.</p>
 <p><strong>Note:</strong> Empty session messages are explicitly disallowed, with the exception of the initial handshake authentication messages. Even authenticated empty messages with <code>n &gt;= 1</code> should be treated and logged as an error, and never passed to user layer.</p>
-<h4 id="mac-modes"><span class="header-section-number">5.5.6.1</span> MAC Modes</h4>
+<h4 id="mac-modes"><span class="header-section-number">6.5.6.1</span> MAC Modes</h4>
 <p>MAC session modes are based on some kind of MAC function, like a truncated HMAC. The write function of these modes can be specified generically in terms of the MAC function.</p>
 <pre><code>write(key: Key, ad: Seq[Byte], plaintext: Seq[Byte])
     -&gt; (user_data: Seq[Byte], auth_tag: Seq[Byte]) 
@@ -1473,7 +1542,7 @@ read(key: Key, message: SessionData) -&gt; (cleartext) or Error
 
 </code></pre>
 <p><strong>Important: </strong> Using a constant-time comparison is critical to guard against time-based side channel attacks.</p>
-<h2 id="certificates"><span class="header-section-number">5.6</span> Certificates</h2>
+<h2 id="certificates"><span class="header-section-number">6.6</span> Certificates</h2>
 <p>SSP21 defines its own certificate format, the Industrial Certificate Format (ICF). It leverages the definition and serialization rules used for messages within the cryptographic layer. The primary design goals of the ICF include:</p>
 <ul>
 <li><p>Simplicity - The format and its encodings should be easy to understand and implement, where ASN.1 and its BER/DER encodings are considered undesirably complex for this application.</p></li>
@@ -1483,16 +1552,16 @@ read(key: Key, message: SessionData) -&gt; (cleartext) or Error
 <li><p>Extensible in terms of metadata - It is desirable in certain applications to sign and include additional metadata in the certificate beyond what was defined in the original specification. An example of such an extension would be role based access control (RBAC) permissions for a specific application protocol. The certificate format shall provide the ability to define extensions and define the required behavior when undefined extensions are encountered.</p></li>
 </ul>
 <p>Defining an additional certificate format does not preclude SSP21 from being extended in the future to use X.509.</p>
-<h3 id="icf-definition"><span class="header-section-number">5.6.1</span> ICF Definition</h3>
+<h3 id="icf-definition"><span class="header-section-number">6.6.1</span> ICF Definition</h3>
 <p>The certificate format consists of three components:</p>
 <ul>
 <li><p>An outer envelope that contains unauthenticated metadata about the issuer, algorithm, and the signature value.</p></li>
 <li><p>Inner certificate data fully covered by specified the digital signature algorithm.</p></li>
 <li><p>Optional extensions contained within the certificate data itself.</p></li>
 </ul>
-<h4 id="enumerations-2"><span class="header-section-number">5.6.1.1</span> Enumerations</h4>
+<h4 id="enumerations-2"><span class="header-section-number">6.6.1.1</span> Enumerations</h4>
 <p>The following enumerations are used within the various ICF message definitions.</p>
-<h5 id="publickeytype"><span class="header-section-number">5.6.1.1.1</span> PublicKeyType</h5>
+<h5 id="publickeytype"><span class="header-section-number">6.6.1.1.1</span> PublicKeyType</h5>
 <p>This enumeration defines the type of the public key embedded in the certificate body.</p>
 <pre><code>enum PublicKeyType {
     Ed25519 : 0
@@ -1502,7 +1571,7 @@ read(key: Key, message: SessionData) -&gt; (cleartext) or Error
 <li><strong><code>Ed25519</code></strong> - The key is an Ed25519 DSA public key.</li>
 <li><strong><code>X25519</code></strong> - The key is an x25519 Diffie-Hellman key.</li>
 </ul>
-<h4 id="certificate-envelope"><span class="header-section-number">5.6.1.2</span> Certificate Envelope</h4>
+<h4 id="certificate-envelope"><span class="header-section-number">6.6.1.2</span> Certificate Envelope</h4>
 <p>The certificate envelope is defined as follows:</p>
 <pre><code>message CertificateEnvelope {
     issuer_id           :      SeqOf[U8](count = 16)
@@ -1510,21 +1579,21 @@ read(key: Key, message: SessionData) -&gt; (cleartext) or Error
     certificate_body    :      SeqOf[U8]
 }</code></pre>
 <ul>
-<li><p><strong><code>issuer_id</code></strong> - A 16-byte digest of the issuer's public key. This digest shall always be the leftmost 16 bytes of the SHA-256 hash of the public key.</p></li>
+<li><p><strong><code>issuer_id</code></strong> - A 16-byte digest of the issuer’s public key. This digest shall always be the leftmost 16 bytes of the SHA-256 hash of the public key.</p></li>
 <li><p><strong><code>signature</code></strong> - The value of the signature.</p></li>
 <li><p><strong><code>certificate_body</code></strong> - The certificate body covered by the specified digital signature algorithm. This data shall not be parsed until the authenticity is established by verifying the signature.</p></li>
 </ul>
 <p>The following digital signature algorithms (DSA) are defined for usage with the ICF.</p>
-<h5 id="security-discussion"><span class="header-section-number">5.6.1.2.1</span> Security Discussion</h5>
+<h5 id="security-discussion"><span class="header-section-number">6.6.1.2.1</span> Security Discussion</h5>
 <p>Attackers may freely manipulate the <code>issuer_id</code> field with the following impacts:</p>
 <ul>
 <li><p>The verifying party would be unable to find the corresponding public key in which case the verification would immediately fail.</p></li>
 <li><p>The verifying party would apply the wrong public key to the DSA verification, in which case the verification would fail with similar probability as attempting to brute force the signature value.</p></li>
 </ul>
-<p>This <code>issuer_id</code> digest is not cryptographic in nature. It merely acts as convenient fixed-length digest for public keys of any length. It must be well distributed against random inputs (i.e. public key values), but need not be cryptographically secure. A break in the underlying SHA-256 hash function does not require changing how the issuer_id is calculated.</p>
+<p>This <code>issuer_id</code> digest is not cryptographic in nature. It merely acts as convenient fixed-length digest for public keys of any length. It must be well distributed against random inputs (i.e. public key values), but need not be cryptographically secure. A break in the underlying SHA-256 hash function does not require changing how the issuer_id is calculated.</p>
 <p>The truncated hash used in the issuer id is not cryptographic in nature, and merely needs to be collision resistant against the possible random public keys deployed in the system. It serves to provide a fixed size id for public keys of any size or length.</p>
 <p>Attackers may also manipulate the <code>algorithm</code> field. Such a manipulation would fail either due to the length of the signature being incorrect, or an signature value.</p>
-<h4 id="certificate-body"><span class="header-section-number">5.6.1.3</span> Certificate Body</h4>
+<h4 id="certificate-body"><span class="header-section-number">6.6.1.3</span> Certificate Body</h4>
 <p>The certificate body is defined as follows:</p>
 <pre><code>message CertificateBody {
     serial_number     :      U32
@@ -1546,35 +1615,36 @@ read(key: Key, message: SessionData) -&gt; (cleartext) or Error
 <li><strong><code>authority</code></strong> - The holder of the certificate may produce endpoint certificates or authority certificates with a <code>signing_level</code> less than its own. They may not directly participate as endpoints.</li>
 <li><strong><code>endpoint</code></strong> - The holder of the certificate may act as an endpoint within the system, but may not sign other certificates.</li>
 </ul>
-<h4 id="extensions"><span class="header-section-number">5.6.1.4</span> Extensions</h4>
+<h4 id="extensions"><span class="header-section-number">6.6.1.4</span> Extensions</h4>
 <p>Certificate extensions have their own envelope that shall be readable by all implementations.</p>
 <pre><code>message ExtensionEnvelope {
   identifier      : U32
   extension_body  : SeqOf[U8]
 }</code></pre>
 <p>The identifier for each extension shall be unique, and all extensions shall be registered and approved for completeness and suitability with the body maintaining the SSP21 standard. Proprietary extensions are explicitly forbidden. An unknown extension shall always fail verification.</p>
-<h3 id="certificatechain-validation"><span class="header-section-number">5.6.2</span> Certificate/Chain Validation</h3>
+<h3 id="certificatechain-validation"><span class="header-section-number">6.6.2</span> Certificate/Chain Validation</h3>
 <p>An endpoint certificate may be presented during the SSP21 handshake by itself or as part of a chain. This section describes the validation process for a chain. A standalone certificate is just the special case of a chain where the endpoint certificate is directly signed by the trust root. In the descriptions that follow a single certificate is just a chain of length one.</p>
-<p>In PKI mode, trust is fully rooted in the public key of (typically) one authority. This authority may then optionally delegate it's authority to an intermediate signing authorities, or it may directly sign endpoint certificates. End users shall maintain separate signing authorities for masters and outstations so that the compromise of an outstation's private key doesn't enable attacker control of other outstations.</p>
-<div class="figure">
-<img src="img/svg/certificate_chain_verification.png" alt="Figure 5: Verification of a certificate chain (depth == 3)" id="fig:certificate_chain_verification" />
-<p class="caption"><span>Figure 5:</span> Verification of a certificate chain (depth == 3)</p>
+<p>In PKI mode, trust is fully rooted in the public key of (typically) one authority. This authority may then optionally delegate it’s authority to an intermediate signing authorities, or it may directly sign endpoint certificates. End users shall maintain separate signing authorities for masters and outstations so that the compromise of an outstation’s private key doesn’t enable attacker control of other outstations.</p>
+<div id="fig:certificate_chain_verification" class="fignos">
+<figure>
+<img src="svg/certificate_chain_verification.png" alt="Figure 3: Verification of a certificate chain (depth == 3)" /><figcaption><span>Figure 3:</span> Verification of a certificate chain (depth == 3)</figcaption>
+</figure>
 </div>
-<h4 id="trust-anchors"><span class="header-section-number">5.6.2.1</span> Trust Anchors</h4>
+<h4 id="trust-anchors"><span class="header-section-number">6.6.2.1</span> Trust Anchors</h4>
 <p>The device or application running an SSP21 implementation must store the trust anchors in the system: the long-term public keys of one or more authorities embedded in self-signed certificates. How this trust store is implemented is not defined, but some examples include:</p>
 <ul>
 <li>A single certificate loaded into memory during program initialization</li>
-<li>A folder of such certificates with file names corresponding to their <code>issuer_id</code>, i.e. SHA-2 hash of the public key</li>
+<li>A folder of such certificates with file names corresponding to their <code>issuer_id</code>, i.e. SHA-2 hash of the public key</li>
 </ul>
 <p>The certificates in the trust store are wholly trusted and used to establish the authenticity of other certificates. Certificates in the trust store are selected based on the <code>issuer_id</code> of the first certificate in any chain.</p>
-<h4 id="self-signed-certificates"><span class="header-section-number">5.6.2.2</span> Self-signed Certificates</h4>
-<p>The certificates in the trust store are self-signed, i.e. their signature is computed by the private key corresponding to the public key they contain. As such, no external party verifies their authenticity. Being the trust anchor, they derive their authority merely by their presence on the device.</p>
+<h4 id="self-signed-certificates"><span class="header-section-number">6.6.2.2</span> Self-signed Certificates</h4>
+<p>The certificates in the trust store are self-signed, i.e. their signature is computed by the private key corresponding to the public key they contain. As such, no external party verifies their authenticity. Being the trust anchor, they derive their authority merely by their presence on the device.</p>
 <p>Even though this could be accomplished with a bare public key, the self-signed certificate approach is preferred for a number of reasons:</p>
 <ul>
 <li>Symmetry - It allows for authority, intermediate signing authority, and endpoint certificates to be dealt with uniformly.</li>
 <li>Bundled configuration - It allows for configuration parameters to be bundled with the authority public key such as validity times and signing depths. For instance, a root authority certificate with signing depth == 1 would not allow for intermediate certificates during verification.</li>
 </ul>
-<h4 id="verification-procedure"><span class="header-section-number">5.6.2.3</span> Verification Procedure</h4>
+<h4 id="verification-procedure"><span class="header-section-number">6.6.2.3</span> Verification Procedure</h4>
 <p>The goal of certificate chain verification is to ultimately authenticate the final certificate via the chain of trust. Any other result than ending up with a verified certificate at the end of the chain is considered a failed verification. This verification function has the following signature in pseudo code. It will return an error condition if a failure occurs instead of returning a valid terminal certificate.</p>
 <pre><code>
 verify(anchors : Seq[CertificateBody], chain: Seq[CertificateEnvelope]) 
@@ -1587,7 +1657,7 @@ verify(anchors : Seq[CertificateBody], chain: Seq[CertificateEnvelope])
 </ul>
 <p>If no error occurs, <code>verify</code> returns the last parsed certificate in the chain.</p>
 <p>The following steps are performed to verify the chain:</p>
-<ol style="list-style-type: decimal">
+<ol type="1">
 <li><p>Upon receiving a certificate chain (certificate count &gt;= 1), the receiving party shall first examine the <code>issuer_id</code> in the first (possibly only) certificate in the chain and identify the requested anchor certificate. If the anchor certificate cannot be found, return <code>HandshakeError::BAD_CERTIFICATE_CHAIN</code>.</p></li>
 <li><p>Iterate over adjacent certificate pairs using a general purpose function, begining with the selected anchor certificate (A) and the first certificate (C1) in the chain.</p></li>
 </ol>
@@ -1618,9 +1688,9 @@ verify(parent : CertificateBody, child: CertificateEnvelope)
 </ul>
 <p>The function returns the verified body of the child certificate or an error.</p>
 <p>The following sub-steps are performed for each invocation of <code>verify_pair</code>:</p>
-<ol style="list-style-type: upper-alpha">
-<li><p>Compare the <code>issuer_id</code> in the child envelope to the value calculated over the parent's public key. If they do not match, return <code>HandshakeError::BAD_CERTIFICATE_CHAIN</code>.</p></li>
-<li><p>Examine the <code>public_key_type</code> in the parent body. If it is not a DSA public key (e.g. it is a DH key), return <code>HandshakeError::BAD_CERTIFICATE_CHAIN</code>.</p></li>
+<ol type="A">
+<li><p>Compare the <code>issuer_id</code> in the child envelope to the value calculated over the parent’s public key. If they do not match, return <code>HandshakeError::BAD_CERTIFICATE_CHAIN</code>.</p></li>
+<li><p>Examine the <code>public_key_type</code> in the parent body. If it is not a DSA public key (e.g. it is a DH key), return <code>HandshakeError::BAD_CERTIFICATE_CHAIN</code>.</p></li>
 <li><p>Verify that the length of the signature in the child envelope matches the output length of the DSA algorithm specified the parent <code>public_key_type</code>. If it does not, return <code>HandshakeError::BAD_CERTIFICATE_CHAIN</code>.</p></li>
 <li><p>Verify the DSA signature value in the child envelope using the public key in parent body and the raw bytes of <code>certificate_body</code> field of the child envelope. If verification fails, return <code>HandshakeError::AUTHENTICATION_ERROR</code>.</p></li>
 <li><p>Fully parse the child certificate body. If parsing fails, return <code>HandshakeError::BAD_CERTIFICATE_FORMAT</code>.</p></li>
@@ -1629,7 +1699,7 @@ verify(parent : CertificateBody, child: CertificateEnvelope)
 <li><p>Verify that parent.signing_level &gt; child.signing_level. If it is not, return <code>HandshakeError::BAD_CERTIFICATE_CHAIN</code>.</p></li>
 <li><p>Return the fully verified child body for the next iteration.</p></li>
 </ol>
-<ol start="3" style="list-style-type: decimal">
+<ol start="3" type="1">
 <li><p>Return <code>HandshakeError::BAD_CERTIFICATE_CHAIN</code> if the <code>signing_level</code> if the terminal certificate is not zero.</p></li>
 <li><p>Return HandshakeError::BAD_CERTIFICATE_CHAIN if the <code>public_key_type</code> of the terminal certificate is not a DH key.</p></li>
 <li><p>Return the fully verified terminal certificate.</p></li>

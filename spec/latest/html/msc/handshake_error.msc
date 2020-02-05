@@ -1,0 +1,8 @@
+# MSC for successful handshakes
+msc {
+
+  a [label="initiator"], b [label="responder"];
+
+  a=>b [ label = "Request Handshake Begin" ];
+  b=>a [ label = "Reply Handshake Error" ];
+}
